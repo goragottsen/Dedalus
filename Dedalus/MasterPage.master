@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 120px;
+        }
+        .auto-style4 {
+            width: 691px;
+        }
+        .auto-style5 {
+            width: 230px;
+        }
+        .auto-style8 {
+            width: 311px;
+        }
+        .auto-style10 {
+            width: 129px;
+        }
+        .auto-style13 {
+            width: 46px;
+        }
+        .auto-style15 {
+            width: 936px;
+        }
+        .auto-style16 {
+            width: 1204px;
+            height: 700px;
+        }
+        .auto-style17 {
+            width: 885px;
+        }
+        .auto-style18 {
+            font-size: xx-small;
+        }
+        .auto-style19 {
+            width: 100%;
+            position: inherit;
+            z-index: auto;
+            top: 0px;
+            table-layout: auto;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .auto-style23 {
+            width: 136px;
+            height: 47px;
+        }
+        .auto-style24 {
+            width: 46px;
+            height: 47px;
+        }
+        .auto-style25 {
+            width: 885px;
+            height: 47px;
+        }
+        .auto-style26 {
+            height: 47px;
+        }
+        .auto-style27 {
+            width: 136px;
+            height: 624px;
+        }
+        .auto-style28 {
+            width: 46px;
+            height: 624px;
+        }
+        .auto-style29 {
+            width: 885px;
+            height: 624px;
+        }
+        .auto-style30 {
+            height: 624px;
+        }
+        .auto-style34 {
+            width: 364px;
+        }
+        .auto-style35 {
+            width: 160px;
+        }
+        .auto-style36 {
+            width: 182px;
+        }
+        .auto-style37 {
+            width: 136px;
+        }
+    </style>
+</head>
+<body style="margin:0px; padding:0px;">
+    <form id="form1" runat="server">
+        <table class="auto-style19" style="padding: 0px; border-color: #666666; border-style: none; vertical-align: middle; text-align: center; border-collapse: collapse; margin-left: 0px; margin-right: 0px;">
+            <tr>
+                <td class="auto-style2" style="border-color: #666666; vertical-align: top; text-align: center; background-color: #666666">&nbsp;</td>
+                <td class="auto-style5" style="border-color: #666666; vertical-align: top; text-align: center; background-color: #666666; font-family: Verdana; font-size: 0.8em;">
+                    <h1 class="auto-style18" style="padding: 5px; margin: 0px; font-family: Verdana; font-size: 0.8em; text-decoration: none; vertical-align: middle;">Dedalus Book Store</h1>
+                </td>
+                <td class="auto-style4" style="border-color: #666666; vertical-align: top; text-align: center; background-color: #666666">    
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" BackColor="#B5C7DE" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="10px" RenderingMode="Table" Width="700px" Height="20px">
+            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="5px" />
+            <DynamicMenuStyle BackColor="#B5C7DE" />
+            <DynamicSelectedStyle BackColor="#507CD1" />
+            <LevelMenuItemStyles>
+                <asp:MenuItemStyle BackColor="#666666" Font-Underline="False" ForeColor="Black" />
+            </LevelMenuItemStyles>
+            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+            <StaticMenuItemStyle Height="100%" HorizontalPadding="5px" VerticalPadding="5px" />
+            <StaticMenuStyle BackColor="#666666" />
+            <StaticSelectedStyle BackColor="#507CD1" HorizontalPadding="5px" VerticalPadding="4px" />
+        </asp:Menu></td>
+                <td style="border-color: #666666; vertical-align: top; text-align: center; background-color: #666666"></td>
+                <td style="border-color: #666666; vertical-align: top; text-align: center; background-color: #666666"></td>
+            </tr>
+        </table>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style34">&nbsp;</td>
+                <td class="auto-style36">&nbsp;</td>
+                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style35">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style34">&nbsp;</td>
+                <td class="auto-style36">
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style8">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="298px"></asp:TextBox>
+                </td>
+                <td class="auto-style35">
+                    <asp:Button ID="Button1" runat="server" Text="Button" Width="108px" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style34">&nbsp;</td>
+                <td class="auto-style36">&nbsp;</td>
+                <td class="auto-style8">&nbsp;</td>
+                <td class="auto-style35">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+        
+        <table class="auto-style16" style="display: block; border-collapse: collapse; vertical-align: text-top; clear: both; overflow: auto; position: relative; text-align: justify;">
+            <tr>
+                <td class="auto-style23"></td>
+                <td class="auto-style24"></td>
+                <td class="auto-style25" style="vertical-align: top; text-align: justify"></td>
+                <td class="auto-style26"></td>
+                <td class="auto-style26"></td>
+            </tr>
+            <tr>
+                <td class="auto-style27"></td>
+                <td class="auto-style28"></td>
+                <td class="auto-style29" style="vertical-align: top; text-align: justify">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style30"></td>
+                <td class="auto-style30"></td>
+            </tr>
+            <tr>
+                <td class="auto-style37" aria-orientation="vertical">&nbsp;</td>
+                <td class="auto-style13" aria-orientation="vertical">&nbsp;</td>
+                <td class="auto-style17" aria-orientation="vertical" style="vertical-align: top; text-align: justify"></td>
+                <td aria-orientation="vertical">&nbsp;</td>
+                <td aria-orientation="vertical">&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+    
+    <table class="auto-style1" style="vertical-align: bottom; display: block; clear: both; text-align: center; background-color: #666666;">
+        <tr>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style15"><div id="Footer" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.8em"> Footer content </div></td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
