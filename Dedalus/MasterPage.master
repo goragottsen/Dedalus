@@ -34,10 +34,10 @@
         }
         .auto-style16 {
             width: 1204px;
-            height: 700px;
+            min-height: 700px;
         }
         .auto-style17 {
-            width: 885px;
+            width: 985px;
         }
         .auto-style18 {
             font-size: xx-small;
@@ -60,7 +60,7 @@
             height: 47px;
         }
         .auto-style25 {
-            width: 885px;
+            width: 985px;
             height: 47px;
         }
         .auto-style26 {
@@ -75,7 +75,7 @@
             height: 624px;
         }
         .auto-style29 {
-            width: 885px;
+            width: 985px;
             height: 624px;
         }
         .auto-style30 {
@@ -92,6 +92,25 @@
         }
         .auto-style37 {
             width: 136px;
+        }
+        .auto-style38 {
+            width: 364px;
+            height: 26px;
+        }
+        .auto-style39 {
+            width: 182px;
+            height: 26px;
+        }
+        .auto-style40 {
+            width: 311px;
+            height: 26px;
+        }
+        .auto-style41 {
+            width: 160px;
+            height: 26px;
+        }
+        .auto-style42 {
+            height: 26px;
         }
     </style>
 </head>
@@ -146,11 +165,11 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style34">&nbsp;</td>
-                <td class="auto-style36">&nbsp;</td>
-                <td class="auto-style8">&nbsp;</td>
-                <td class="auto-style35">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style38"></td>
+                <td class="auto-style39"></td>
+                <td class="auto-style40"></td>
+                <td class="auto-style41"></td>
+                <td class="auto-style42"></td>
             </tr>
         </table>
     </div>
