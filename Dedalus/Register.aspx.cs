@@ -81,18 +81,18 @@ public partial class _Default : System.Web.UI.Page
     protected bool isNumber(char c) //function for checking if a char is a number
     {
         string nums = "1234567890"; //string containing valid chars
-        return nums.Contains(c) != -1;     
+        return nums.Contains(c);     
     }
 
     protected bool isUppercase(char c) //check if char is uppercase letter
     {
         string uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //string containing valid chars
-        return uppers.Contains(c) != -1
+        return uppers.Contains(c);
     }
 
     protected bool isLowercase(char c) //check if char is lowercase letter
     {
         string lowers = "abcdefghijklmnopqrstuvwxyz";
-        return lowers.Contains(c) != -1
+        return lowers.Contains(c);
     }
 }
