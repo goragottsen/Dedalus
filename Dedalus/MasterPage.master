@@ -206,7 +206,8 @@
     <table class="auto-style1" style="vertical-align: bottom; display: block; clear: both; text-align: center; background-color: #666666;">
         <tr>
             <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style15"><div id="Footer" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.8em"> Footer content </div></td>
+            <td class="auto-style15"><div id="Footer" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.8em">Copyright <%= DateTime.Now.Year.ToString() %> 
+                &copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </div></td>
             <td>&nbsp;</td>
         </tr>
     </table>
