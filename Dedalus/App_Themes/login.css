@@ -1,0 +1,12 @@
+﻿#login-content {
+    margin: auto;
+    width: 50%;
+    padding-left: 90px;
+    border: solid 1px;
+}
+h2, h1{
+    text-align:center;
+}
+h3 {
+    text-align: center;
+}
