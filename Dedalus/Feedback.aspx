@@ -2,24 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="App_Themes/Feedback/feedback.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript">
-        /*function validateEmail(source, args) {
-            var regex = new RegExp("^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$");
-            var notValid = !regex.test(args.Value);
-            var txtEmail = document.getElementById("txtEmail");
-            alert(notValid);
-            alert(txtEmail);
-            if (notValid) {
-                txtEmail.classList.add("error");
-            }
-            else {
-                try {
-                    txtEmail.classList.remove("error");
-                }
-                catch (e) {}
-            }
-        }*/
-    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="feedback-container">
