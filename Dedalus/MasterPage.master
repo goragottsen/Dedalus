@@ -36,9 +36,6 @@
             width: 1204px;
             min-height: 700px;
         }
-        .auto-style17 {
-            width: 985px;
-        }
         .auto-style18 {
             font-size: xx-small;
         }
@@ -60,7 +57,7 @@
             height: 47px;
         }
         .auto-style25 {
-            width: 985px;
+            width: 954px;
             height: 47px;
         }
         .auto-style26 {
@@ -75,7 +72,7 @@
             height: 624px;
         }
         .auto-style29 {
-            width: 985px;
+            width: 954px;
             height: 624px;
         }
         .auto-style30 {
@@ -111,6 +108,20 @@
         }
         .auto-style42 {
             height: 26px;
+        }
+        .auto-style43 {
+            width: 954px;
+        }
+        .auto-style44 {
+            width: 58px;
+            height: 47px;
+        }
+        .auto-style45 {
+            width: 58px;
+            height: 624px;
+        }
+        .auto-style46 {
+            width: 58px;
         }
     </style>
 </head>
@@ -158,10 +169,11 @@
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Genre] FROM [Books]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style8">
-                    <asp:TextBox ID="TextBox1" runat="server" Width="298px"></asp:TextBox>
+                    <asp:TextBox ID="txtSearch" runat="server" Width="298px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Title], [Author], [Publisher] FROM [Books]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style35">
-                    <asp:Button ID="Button1" runat="server" Text="Search" Width="108px" />
+                    <asp:Button ID="Button1" runat="server" Text="Search" Width="108px" OnClick="Button1_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -180,7 +192,7 @@
                 <td class="auto-style23"></td>
                 <td class="auto-style24"></td>
                 <td class="auto-style25" style="vertical-align: top; text-align: justify"></td>
-                <td class="auto-style26"></td>
+                <td class="auto-style44"></td>
                 <td class="auto-style26"></td>
             </tr>
             <tr>
@@ -191,14 +203,15 @@
         
         </asp:ContentPlaceHolder>
                 </td>
-                <td class="auto-style30"></td>
+                <td class="auto-style45" style="vertical-align: top; text-align: justify">
+                    &nbsp;</td>
                 <td class="auto-style30"></td>
             </tr>
             <tr>
                 <td class="auto-style37" aria-orientation="vertical">&nbsp;</td>
                 <td class="auto-style13" aria-orientation="vertical">&nbsp;</td>
-                <td class="auto-style17" aria-orientation="vertical" style="vertical-align: top; text-align: justify"></td>
-                <td aria-orientation="vertical">&nbsp;</td>
+                <td class="auto-style43" aria-orientation="vertical" style="vertical-align: top; text-align: justify"></td>
+                <td aria-orientation="vertical" class="auto-style46">&nbsp;</td>
                 <td aria-orientation="vertical">&nbsp;</td>
             </tr>
         </table>
@@ -207,8 +220,7 @@
     <table class="auto-style1" style="vertical-align: bottom; display: block; clear: both; text-align: center; background-color: #666666;">
         <tr>
             <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style15"><div id="Footer" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.8em">Copyright <%= DateTime.Now.Year.ToString() %> 
-                &copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </div></td>
+            <td class="auto-style15"><div id="Footer" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.8em">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </div></td>
             <td>&nbsp;</td>
         </tr>
     </table>
