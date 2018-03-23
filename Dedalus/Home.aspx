@@ -1,17 +1,21 @@
-﻿<%@ Page Title="Dedalus" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Dedalus" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>Welcome to the Dedalus Web Site!</p>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="686px" HorizontalAlign="Left">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="686px" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
             <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:CommandField ButtonType="Button" SelectText="Show Details" ShowSelectButton="True" />
-            <asp:ButtonField ButtonType="Button" Text="Add to Cart" />
+            <asp:TemplateField ShowHeader="False">
+                <ItemTemplate>
+                    <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandName="AddToCart" Text="Add to Cart" OnClick="AddToCartClick"/>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="Silver" Font-Bold="True" ForeColor="White" />

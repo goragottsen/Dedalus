@@ -11,8 +11,34 @@ public partial class _Default : System.Web.UI.Page
     // (Maybe dynamically loading check-boxes or something... Or just links and anchor tags. Amazon uses links and anchor tags)
     // This is in addition to just carrying everything over to a "Checkout" page.
 
+    BookList bookList;
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        bookList = BookList.getBookList();
 
+        if (!IsPostBack)
+        {
+            this.displayBooks();
+        }
+
+    }
+
+    private void displayBooks()
+    {
+        string content = "";
+
+        for (int i = 0; i < bookList.bList.Count; i++)
+        {
+            content = content + bookList.bList[i].title + ". By: " + bookList.bList[i].author + ". Price: $" + bookList.bList[i].price + "\n";
+        }
+
+        tbCart.Text = content;
+
+    }
+
+    protected void btnBackToStore_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("Home.aspx"); 
     }
 }
