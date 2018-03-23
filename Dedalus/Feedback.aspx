@@ -24,25 +24,19 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="feedback-container">
         <h2 id ="feedback-title">Tell us what you think!</h2>
-        <label for="txtName" class="feedbackLabel">Your name:</label>
-        <br />
-        <br />
+        <label for="txtName" class="feedbackLabel">Your name:</label><br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName">*Required</asp:RequiredFieldValidator>
         <br />
         <asp:TextBox ID="txtName" runat="server" CssClass="feedbackInfo" placeholder="Enter your name here!"></asp:TextBox>
         <br />
         <br /><br />
-        <label for="txtEmail" class="feedbackLabel">Your e-mail address</label>
-        <br />
-        <br />
+        <label for="txtEmail" class="feedbackLabel">Your e-mail address</label><br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Your email address is required!" ControlToValidate="txtEmail">*Required</asp:RequiredFieldValidator><br />
         <asp:TextBox ID="txtEmail" runat="server" CssClass="feedbackInfo" placeholder="Enter your email here!"></asp:TextBox>
         <br />
         <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid Email" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="true"></asp:CustomValidator>
         <br /><br />
-        <label for="rbPgRating" class="feedbackLabel">How would you rate our web site?</label>
-        <br />
-        <asp:RadioButtonList ID="rbPgRating" CssClass="selections rbList" runat="server" RepeatDirection="Horizontal" align="center">
+        <label for="rbPgRating" class="feedbackLabel">How would you rate our web site?</label><asp:RadioButtonList ID="rbPgRating" CssClass="selections rbList" runat="server" RepeatDirection="Horizontal" align="center">
             <asp:ListItem value="0" Text="Bad" />
             <asp:ListItem value="1" />
             <asp:ListItem value="2" />
@@ -56,9 +50,7 @@
             <asp:ListItem value="10" Text="Good"/>
         </asp:RadioButtonList>
         <br />
-        <label for="cbDeviceUsage" class="feedbackLabel">What devices do you use to access our website?</label>
-        <br />
-        <asp:CheckBoxList ID="cbDeviceUsage" CssClass="selections cbList" RepeatDirection="Vertical" align="center" runat="server">
+        <label for="cbDeviceUsage" class="feedbackLabel">What devices do you use to access our website?</label><asp:CheckBoxList ID="cbDeviceUsage" CssClass="selections cbList" RepeatDirection="Vertical" align="center" runat="server">
             <asp:ListItem value="tablet" Text="Tablet"/>
             <asp:ListItem value="smartPhone" Text="Smart Phone"/>
             <asp:ListItem value="pc" Text="PC"/>
@@ -68,6 +60,7 @@
         <label for="comment" class="feedbackLabel">Any Additional Comments?</label>
         <br />
         <asp:TextBox ID="txtComments" runat="server" CssClass="feedbackInfo comment" Height="125px" MaxLength="300" Width="250px" placeholder="(300 character limit)"></asp:TextBox>
+        <br />
         <br />
         <asp:Button ID="btnSubmit" runat="server" Text="Send!" CssClass="btnSubmit" OnClick="btnSubmit_Click" />
     </div>
