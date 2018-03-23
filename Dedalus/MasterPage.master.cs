@@ -9,7 +9,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+       
     }
 
     protected void TextBox1_TextChanged(object sender, EventArgs e)
@@ -19,7 +19,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        TextBox search = (TextBox)Page.FindControl("txtSearch");
 
+    }
+
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        
     }
 }

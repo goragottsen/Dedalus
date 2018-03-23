@@ -5,10 +5,11 @@
     height: auto;
     width: 500px;
     text-align: center;
-    background: #e2ab76;
-    border: 5px solid #f2c892;
+    /*background: #e2ab76;
+      box-shadow: -3px 3px 20px #111111;
+    */
+    border: 2px solid;
     border-radius: 5px;
-    box-shadow: -3px 3px 20px #111111;
 }
 
 #feedback-title {
@@ -17,7 +18,7 @@
     padding: 10px 5px;
     min-width: 250px;
     max-width: 400px;
-    background: #fef1f0;
+    background: #c0c0c0;
     border: 2px solid #242424;
     border-radius: 5px;
     font: 25px "Arial Black",Arial;
@@ -26,28 +27,30 @@
 .feedbackLabel {
     display: inline;
     min-width: 150px;
-    background: #b27a42;
+    /*background: #b27a42;
+      border: 3px solid;
+      border-radius: 5px;
+    */
     margin: 15px auto;
     padding: 8px;
-    border: 3px solid #966c39;
-    border-radius: 5px;
     font: 15px "Arial Black", Arial;
 }
 
 .feedbackInfo {
     margin: 15px 25px;
     padding: 10px;
-    background: #fce4c7;
+    /*background: #fce4c7;*/
     text-align: center;
     width: 150px;
 }
 
 .btnSubmit {
     padding: 10px;
-    border-top: 3px solid #f0c090;
-    border-right: 3px solid #f8d2a9;
-    border-left: 3px solid #C29872;
-    border-bottom: 3px solid #D2A872;
+    /*border-top: 3px solid #f0c090;
+      border-right: 3px solid #f8d2a9;
+      border-left: 3px solid #C29872;
+      border-bottom: 3px solid #D2A872;
+      */
     border-radius: 2px;
     background: lightblue;
     font: 14px "Arial Black", Arial;
@@ -55,10 +58,12 @@
 
 .selections {
     margin: 25px auto;
-    border-top: 3px solid #f0c090;
-    border-right: 3px solid #f8d2a9;
-    border-left: 3px solid #C29872;
-    border-bottom: 3px solid #D2A872;
+    /*
+      border-top: 3px solid #f0c090;
+      border-right: 3px solid #f8d2a9;
+      border-left: 3px solid #C29872;
+      border-bottom: 3px solid #D2A872;
+    */
 }
 
 .rbList label{
@@ -69,9 +74,9 @@
     text-align:left;
 }
 .cbOtherDevice {
-    background: #fce4c7;
+    /*background: #fce4c7;*/
     text-align: center;
-    width:100px;
+    width: 100px;
 }
 
 .comment {
@@ -88,7 +93,7 @@
     }
 
     .deviceList input[type=checkbox]:checked + label {
-        background: rgba(225,225,75,0.9);
+        /*background: rgba(225,225,75,0.9);*/
     }
 
 .content{

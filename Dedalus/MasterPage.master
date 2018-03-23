@@ -164,7 +164,8 @@
             <tr>
                 <td class="auto-style34">&nbsp;</td>
                 <td class="auto-style36">
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Genre" DataValueField="Genre">
+                    <asp:DropDownList ID="DropDownList1" AppendDataBoundItems="true" runat="server" DataSourceID="SqlDataSource1" DataTextField="Genre" DataValueField="Genre" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                        <asp:ListItem Text="Choose genre" Value="0" />
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Genre] FROM [Books]"></asp:SqlDataSource>
                 </td>
