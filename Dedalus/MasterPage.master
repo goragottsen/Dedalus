@@ -153,14 +153,15 @@
             <tr>
                 <td class="auto-style34">&nbsp;</td>
                 <td class="auto-style36">
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Genre" DataValueField="Genre">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Genre] FROM [Books]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style8">
                     <asp:TextBox ID="TextBox1" runat="server" Width="298px"></asp:TextBox>
                 </td>
                 <td class="auto-style35">
-                    <asp:Button ID="Button1" runat="server" Text="Button" Width="108px" />
+                    <asp:Button ID="Button1" runat="server" Text="Search" Width="108px" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
