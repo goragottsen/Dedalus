@@ -5,49 +5,39 @@
         .auto-style38 {
             width: 224px;
         }
-        .auto-style47 {
-            height: 64px;
-        }
         .auto-style48 {
             height: 64px;
-            text-align: right;
-        }
-        .auto-style49 {
-            height: 57px;
+            text-align: left;
+            width: 164px;
         }
         .auto-style51 {
             height: 32px;
-            text-align: right;
-        }
-        .auto-style52 {
-            height: 32px;
-        }
-        .auto-style53 {
-            height: 31px;
+            text-align: left;
+            width: 164px;
         }
         .auto-style54 {
             height: 31px;
-            text-align: right;
-        }
-        .auto-style55 {
-            height: 57px;
-            text-align: right;
-        }
-        .auto-style56 {
-            height: 57px;
-            width: 317px;
+            text-align: left;
+            width: 164px;
         }
         .auto-style57 {
             height: 64px;
-            width: 317px;
+            width: 256px;
+            text-align: left;
         }
         .auto-style58 {
             height: 32px;
-            width: 317px;
+            width: 256px;
+            text-align: left;
         }
         .auto-style59 {
             height: 31px;
-            width: 317px;
+            width: 256px;
+            text-align: left;
+        }
+        .auto-style60 {
+            width: 192px;
+            height: 26px;
         }
     </style>
     <script>
@@ -109,25 +99,21 @@
         <h1>My Profile</h1>
         <table class="auto-style1">
             <tr>
-                <td class="auto-style38" rowspan="4">
-                    <asp:Image ID="imgAvatar" runat="server" AlternateText="My Avatar" Height="184px" Width="184px" />
+                <td class="auto-style60" rowspan="4">
+                    <asp:Image ID="imgAvatar" runat="server" AlternateText="My Avatar" Height="184px" Width="184px" ImageUrl="App_Images/avatarph.png" />
                     <br />
-                    <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                    <br />
+                    <asp:Label ID="lblUsername" runat="server">ExampleUsername</asp:Label>
                 </td>
-                <td class="auto-style56">Email Address:</td>
-                <td class="auto-style55">
-                    <asp:Label ID="lblEmail" runat="server"></asp:Label>
+                <td class="auto-style59">Email Address:</td>
+                <td class="auto-style54">
+                    <asp:Label ID="lblEmail" runat="server">example@georgebrown.ca</asp:Label>
                 </td>
-                <td class="auto-style49"></td>
             </tr>
             <tr>
                 <td class="auto-style57">Update Password (must be 6-20 characters in length, must contain one uppercase, one lowercase and one number):</td>
                 <td class="auto-style48">
                     <asp:TextBox ID="txtNewPassword" runat="server" TextMode="Password"></asp:TextBox>
-                </td>
-                <td class="auto-style47">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNewPassword" Display="Dynamic" ErrorMessage="*Required."></asp:RequiredFieldValidator>
-                    <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtNewPassword" Display="Dynamic" ErrorMessage="Please enter a valid password." OnServerValidate="CustomValidator1_ServerValidate" ClientValidationFunction="validatePassword"></asp:CustomValidator>
                 </td>
             </tr>
             <tr>
@@ -135,17 +121,17 @@
                 <td class="auto-style51">
                     <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td class="auto-style52">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmPassword" Display="Dynamic" ErrorMessage="*Required."></asp:RequiredFieldValidator>
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtNewPassword" ControlToValidate="txtConfirmPassword" Display="Dynamic" ErrorMessage="Passwords must match."></asp:CompareValidator>
-                </td>
             </tr>
             <tr>
-                <td class="auto-style59"></td>
-                <td class="auto-style54">
+                <td class="auto-style59">
                     <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" OnClick="btnChangePassword_Click" />
                 </td>
-                <td class="auto-style53"></td>
+                <td class="auto-style54">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNewPassword" Display="Dynamic" ErrorMessage="Both password fields must be filled."></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtConfirmPassword" Display="Dynamic" ErrorMessage="Both password fields must be filled."></asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtNewPassword" Display="Dynamic" ErrorMessage="Please enter a valid password." OnServerValidate="CustomValidator1_ServerValidate" ClientValidationFunction="validatePassword"></asp:CustomValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtNewPassword" ControlToValidate="txtConfirmPassword" Display="Dynamic" ErrorMessage="Passwords must match."></asp:CompareValidator>
+                </td>
             </tr>
         </table>
         <br />
