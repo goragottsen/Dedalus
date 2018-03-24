@@ -174,7 +174,7 @@
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Title], [Author], [Publisher] FROM [Books]"></asp:SqlDataSource>
                 </td>
                 <td class="auto-style35">
-                    <asp:Button ID="Button1" runat="server" Text="Search" Width="108px" OnClick="Button1_Click" />
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" Width="108px" OnClick="Button1_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
