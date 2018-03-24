@@ -10,7 +10,7 @@
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
             <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:CommandField ButtonType="Button" SelectText="Show Details" ShowSelectButton="True" ShowEditButton="True" />
+            <asp:CommandField ButtonType="Button" SelectText="Show Details" ShowSelectButton="True" />
             <asp:TemplateField ShowHeader="False">
                 <ItemTemplate>
                     <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandName="AddToCart" Text="Add to Cart" OnClick="AddToCartClick"/>
