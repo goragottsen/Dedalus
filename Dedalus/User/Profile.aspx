@@ -100,7 +100,7 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style60" rowspan="4">
-                    <asp:Image ID="imgAvatar" runat="server" AlternateText="My Avatar" Height="184px" Width="184px" ImageUrl="App_Images/avatarph.png" />
+                    <asp:Image ID="imgAvatar" runat="server" AlternateText="My Avatar" Height="184px" Width="184px" ImageUrl="~/App_Images/avatarph.png" />
                     <br />
                     <br />
                     <asp:Label ID="lblUsername" runat="server">ExampleUsername</asp:Label>
