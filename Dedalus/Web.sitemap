@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="" title=""  description="Outer node">
-    <siteMapNode url="~/Home.aspx" title="Home"  description="Home page of the site" />
-    <siteMapNode url="~/AboutUs.aspx" title="About Us"  description="Bio of all the project participants" />
-    <siteMapNode url="~/Information.aspx" title="Information"  description="Information about the product" />
-    <siteMapNode url="~/Feedback.aspx" title="Feedback"  description="Feedback form" />
-    <siteMapNode url="~/Profile.aspx" title="My Profile"  description="Profile page" />
-    <siteMapNode url="~/Cart.aspx" title="My Cart"  description="Cart page" />
+    <siteMapNode url="~/User/Home.aspx" title="Home"  description="Home page of the site" />
+    <siteMapNode url="~/User/AboutUs.aspx" title="About Us"  description="Bio of all the project participants" />
+    <siteMapNode url="~/User/Information.aspx" title="Information"  description="Information about the product" />
+    <siteMapNode url="~/User/Feedback.aspx" title="Feedback"  description="Feedback form" />
+    <siteMapNode url="~/User/Profile.aspx" title="My Profile"  description="Profile page" />
+    <siteMapNode url="~/User/Cart.aspx" title="My Cart"  description="Cart page" />
     <siteMapNode url="" title=""  description="" />
     <siteMapNode url="" title=""  description="" />
   </siteMapNode>
