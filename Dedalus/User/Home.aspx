@@ -1,9 +1,10 @@
-﻿<%@ Page Title="Dedalus" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" ValidateRequest="false" %>
+﻿<%@ Page Title="Dedalus" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="_Default" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>Welcome to the Dedalus Web Site!</h2>
+    
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="686px" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
@@ -108,6 +109,22 @@
 </asp:SqlDataSource>
     <br />
     </asp:Content>
+
+
+
+<asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+          <div class="container">
+              <h1 class="display-3">Welcome to the Dedalus Web Site!</h1>
+              <p style="padding: 0px; margin: 0px; display: block; clear: both; position: static;">
+                  This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+              <p>
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+          </div>
+</div>
+</asp:Content>
+
 
 
 

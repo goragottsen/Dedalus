@@ -1,16 +1,10 @@
-﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Visitor/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
         <link href="App_Themes/login.css" type="text/css" rel="stylesheet" />
 
     
     <style type="text/css">
-        .auto-style39 {
-            width: 142px;
-        }
-        .auto-style40 {
-            width: 270px;
-        }
         .auto-style44 {
             width: 154px;
             height: 26px;
@@ -47,7 +41,7 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>Thank you for joining us here at Dedalus books!</h1>
+    <h1 style="padding-top: 50px">Thank you for joining us here at Dedalus books!</h1>
     <p></p>
     <h2>Please provide your login information below.</h2>
     <br />

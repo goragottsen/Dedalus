@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Information" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="Information.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Information" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Information.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -7,7 +7,7 @@
         <div>
             <h1>Information Page</h1>
 
-            <p>Welcome to Dedalus Books!</p>
+            <p style="padding: 15px 0px 0px 0px">Welcome to Dedalus Books!</p>
 
             <p>Dedalus Books is an online E-book retailer that provides publishing and distribution services to independant authors and content creators. 
                 With the help of our independant partners, we can bring you captivating and thought provoking literature that you won't be able to find anywhere else!

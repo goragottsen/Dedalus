@@ -1,9 +1,9 @@
-﻿<%@ Page Title="About Us" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="AboutUs.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="About Us" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AboutUs.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>About Us</h1>
+    <h1 style="padding-top: 50px">About Us</h1>
     <h2>Anastasiia Roldugina</h2>
     <p>Computer programming student at George Brown College with a strong set of skills and experience in languages such as Java, 
         Python, C#. Learning new technologies and implementing them into life is what inspires me a lot. Love creating things and applications.</p>

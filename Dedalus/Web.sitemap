@@ -3,11 +3,12 @@
   <siteMapNode url="" title=""  description="Outer node">
     <siteMapNode url="~/User/Home.aspx" title="Home"  description="Home page of the site" />
     <siteMapNode url="~/User/AboutUs.aspx" title="About Us"  description="Bio of all the project participants" />
-    <siteMapNode url="~/User/Information.aspx" title="Information"  description="Information about the product" />
+    <siteMapNode url="~/User/Information.aspx" title="Information"  description="Information about the product" roles="*"/>
     <siteMapNode url="~/User/Feedback.aspx" title="Feedback"  description="Feedback form" />
     <siteMapNode url="~/User/Profile.aspx" title="My Profile"  description="Profile page" />
     <siteMapNode url="~/User/Cart.aspx" title="My Cart"  description="Cart page" />
-    <siteMapNode url="" title=""  description="" />
-    <siteMapNode url="" title=""  description="" />
+    <siteMapNode url="~/Moderator/FeedbackList.aspx" title=""  description="" />
+    <siteMapNode url="~/Moderator/UserList.aspx" title=""  description="" />
+    <siteMapNode url="~/Moderator/TransactionsList.aspx" title=""  description="" />
   </siteMapNode>
 </siteMap>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="My Profile" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="Profile.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="My Profile" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Profile.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -96,7 +96,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
-        <h1>My Profile</h1>
+        <h1 style="padding-top: 15px">My Profile</h1>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style60" rowspan="4">
