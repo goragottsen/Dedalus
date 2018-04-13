@@ -95,4 +95,6 @@ public partial class _Default : System.Web.UI.Page
         string lowers = "abcdefghijklmnopqrstuvwxyz";
         return lowers.Contains(c);
     }
+    //Database validation:
+    //Loop through emails in db to check if the user exists
 }
