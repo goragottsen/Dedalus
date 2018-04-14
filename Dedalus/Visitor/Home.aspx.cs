@@ -10,9 +10,6 @@ using System.Data;
 
 public partial class _Default : System.Web.UI.Page
 {
-
-    Book b;
-
     protected void Page_Load(object sender, EventArgs e)
     {
 

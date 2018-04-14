@@ -56,7 +56,7 @@
       </div>
     </nav>
      
-    <main role="main" class="container">
+    <main role="main" class="container" style="min-height:800px;">
         <div class="starter-template">
       
           
@@ -71,8 +71,8 @@
             </div>
     </main>
 
-    <footer class="container">
-      <span class="text-muted" style="clear: both; position: fixed;">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </span>
+    <footer class="container" runat="server" style="position: absolute; z-index: 0;">
+      <span class="text-muted">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </span>
     </footer>
       </form>
     <!-- Bootstrap core JavaScript

@@ -26,7 +26,7 @@
       <form id="form1"  runat="server">
     <nav ID="Menu1" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" runat="server">
       <a class="navbar-brand" href="/Visitor/Information.aspx">dedalus</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button runat="server" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -46,13 +46,13 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server">Search</button>
         </form>--%>
           <div class="form-inline my-2 my-lg-0">
-                    <a class="nav-link" href="/Login.aspx">Login </a>
-               <a class="nav-link" href="/Register.aspx">Register </a>
+                    <a class="nav-link" runat="server" href="/Login.aspx">Login </a>
+               <a class="nav-link" runat="server" href="/Register.aspx">Register </a>
            </div>
       </div>
     </nav>
      
-    <main role="main" class="container">
+    <main role="main" class="container" style="min-height:800px;" >
         <div class="starter-template">     
           
               <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
@@ -66,8 +66,8 @@
             </div>
     </main>
 
-    <footer class="container">
-      <span class="text-muted" style="clear: both; position: fixed;">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </span>
+    <footer class="container" runat="server" style="position: absolute;">
+      <span class="text-muted">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </span>
     </footer>
       </form>
     <!-- Bootstrap core JavaScript
