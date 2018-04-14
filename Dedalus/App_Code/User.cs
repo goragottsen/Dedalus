@@ -8,11 +8,16 @@ using System.Web;
 /// </summary>
 public class User
 {
-    protected int userId;
-    protected string name;
-    protected string username;
-    protected string password;
-    protected string email;
-    protected string address;
-    protected string accessLevel;
+    public int userId;
+    public string name;
+    public string username;
+    public string password;
+    public string email;
+    public string address;
+    public int accessLevel;
+
+    public User()
+    {
+
+    }
 }

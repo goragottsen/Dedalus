@@ -49,14 +49,16 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server">Search</button>
         </form>--%>
           <div class="form-inline my-2 my-lg-0">
-                    <a class="nav-link" href="/Login.aspx">Login <span class="sr-only"></span></a>
-               <a class="nav-link" href="/Register.aspx">Register <span class="sr-only"></span></a>
+                    <a class="nav-link" href="/Profile.aspx">
+                        <asp:Label ID="username" runat="server" Text=""></asp:Label> <span class="sr-only"></span></a>
+               <a class="nav-link" href="/User/Cart.aspx">Cart <span class="sr-only"></span></a>
            </div>
       </div>
     </nav>
      
     <main role="main" class="container">
-        <div class="starter-template">     
+        <div class="starter-template">
+      
           
               <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
 
