@@ -46,6 +46,22 @@ public partial class _Default : System.Web.UI.Page
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
         return;
-    } 
+    }
 
+
+    protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+    {
+        if(e.Exception != null)
+        {
+            lblError.Text = "A database error has occurred";
+            e.ExceptionHandled = true;
+        }
+        else
+        {
+            if(e.AffectedRows == 0)
+            {
+                lblError.Text = " Book is not deleted. Someone may have already deleted it already.";
+            }
+        }
+    }
 }
