@@ -15,6 +15,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if (!IsPostBack)
         {
             this.displayUser();
+            this.setActiveLink();
         }
     }
     private void displayUser()
@@ -26,6 +27,24 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
 
         username.Text = usrname;
+    }
+    public void setActiveLink()
+    {
+        switch (Page.Title)
+        {
+            case "Home":
+                home.Attributes.Add("class", "nav-link active");
+                break;
+            case "Information":
+                information.Attributes.Add("class", "nav-link active");
+                break;
+            case "Feedback":
+                feedback.Attributes.Add("class", "nav-link active");
+                break;
+            case "About":
+                about.Attributes.Add("class", "nav-link active");
+                break;
+        }
     }
 
     //protected void TextBox1_TextChanged(object sender, EventArgs e)

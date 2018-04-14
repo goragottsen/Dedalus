@@ -32,26 +32,26 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/User/Home.aspx">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" id="home" runat="server" href="/User/Home.aspx">Home </a>
           </li>
-            <li class="nav-item active">
-            <a class="nav-link" href="/User/Information.aspx">Information <span class="sr-only"></span></a>
+            <li class="nav-item">
+            <a class="nav-link" id="information" runat="server" href="/User/Information.aspx">Information </a>
           </li>
-            <li class="nav-item active">
-            <a class="nav-link" href="/User/Feedback.aspx">Leave Feedback <span class="sr-only"></span></a>
+            <li class="nav-item">
+            <a class="nav-link" id="feedback" runat="server" href="/User/Feedback.aspx">Leave Feedback </a>
           </li>
-            <li class="nav-item active">
-            <a class="nav-link" href="/User/AboutUs.aspx">About Us <span class="sr-only"></span></a>
+            <li class="nav-item">
+            <a class="nav-link" id="about" runat="server" href="/User/AboutUs.aspx">About Us </a>
         </ul>
         <%--<form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server">Search</button>
         </form>--%>
           <div class="form-inline my-2 my-lg-0">
-                    <a class="nav-link" href="/Profile.aspx">
-                        <asp:Label ID="username" runat="server" Text=""></asp:Label> <span class="sr-only"></span></a>
-               <a class="nav-link" href="/User/Cart.aspx">Cart <span class="sr-only"></span></a>
+            <a class="nav-link" id="cart" href="/User/Cart.aspx">Cart </a>
+            <a class="nav-link" href="/Profile.aspx">
+                <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
            </div>
       </div>
     </nav>
