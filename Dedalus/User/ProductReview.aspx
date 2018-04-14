@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="feedback-container">
-        <h2 id="feedback-title">Product Review</h2>
+        <h1 id="feedback-title">Product Review</h1>
         <table id="review-container">
             <tr>
                 <th>

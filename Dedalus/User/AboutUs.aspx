@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1 style="padding-top: 50px">About Us</h1>
+    <div>
+    <h1>About Us</h1>
     <h2>Anastasiia Roldugina</h2>
     <p>Computer programming student at George Brown College with a strong set of skills and experience in languages such as Java, 
         Python, C#. Learning new technologies and implementing them into life is what inspires me a lot. Love creating things and applications.</p>
@@ -23,5 +24,6 @@
     <p>A student at George Brown college that likes to read the following genres: science fiction and science non-fiction.  Easily entertained, and often bored.</p>
     <h2>Jordan Pike</h2>
     <p>Student in George Brown College's T127 program. A lifetime gamer and tinkerer inspired to get into computer programming.</p>
+    </div>
 </asp:Content>
 

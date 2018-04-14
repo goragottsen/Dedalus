@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="feedback-container">
-        <h2 id ="feedback-title" style="padding-top: 50px">Tell us what you think!</h2>
+        <h1 id ="feedback-title">Tell us what you think!</h1>
         <label for="txtName" class="feedbackLabel">Your name:</label><br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName">*Required</asp:RequiredFieldValidator>
         <br />

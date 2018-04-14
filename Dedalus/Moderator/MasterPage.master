@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    
+      <link href="/App_Themes/Layout.css" rel="stylesheet" />
       <link href="sticky-footer-navbar.css" rel="stylesheet">
       <link href="jumbotron.css" rel="stylesheet">
       
