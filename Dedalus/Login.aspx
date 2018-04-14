@@ -41,7 +41,7 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1 style="padding-top: 50px">Thank you for joining us here at Dedalus books!</h1>
+    <h1>Thank you for joining us here at Dedalus books!</h1>
     <p></p>
     <h2>Please provide your login information below.</h2>
     <br />
