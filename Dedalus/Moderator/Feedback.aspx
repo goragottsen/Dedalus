@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Feedback" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="Feedback.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="Feedback" Language="C#" MasterPageFile="~/Moderator/MasterPage.master" AutoEventWireup="true" CodeFile="Feedback.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="App_Themes/Feedback/feedback.css" type="text/css" rel="stylesheet" />

@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Moderator/MasterPage.master" AutoEventWireup="true" CodeFile="UsersList.aspx.cs" Inherits="Moderator_Default" %>
+﻿<%@ Page Title="User List" Language="C#" MasterPageFile="~/Moderator/MasterPage.master" AutoEventWireup="true" CodeFile="UsersList.aspx.cs" Inherits="Moderator_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <h1 style="padding-top: 50px; padding-bottom: 40px;">List of Dedalus Users</h1>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [UserID] = @original_UserID AND [Name] = @original_Name AND [Username] = @original_Username AND [Password] = @original_Password AND [Email] = @original_Email AND [Address] = @original_Address AND [AccessLevel] = @original_AccessLevel" InsertCommand="INSERT INTO [Users] ([Name], [Username], [Password], [Email], [Address], [AccessLevel]) VALUES (@Name, @Username, @Password, @Email, @Address, @AccessLevel)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Users]" UpdateCommand="UPDATE [Users] SET [Name] = @Name, [Username] = @Username, [Password] = @Password, [Email] = @Email, [Address] = @Address, [AccessLevel] = @AccessLevel WHERE [UserID] = @original_UserID AND [Name] = @original_Name AND [Username] = @original_Username AND [Password] = @original_Password AND [Email] = @original_Email AND [Address] = @original_Address AND [AccessLevel] = @original_AccessLevel">
         <DeleteParameters>
             <asp:Parameter Name="original_UserID" Type="Int32" />
@@ -37,7 +38,7 @@
             <asp:Parameter Name="original_AccessLevel" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="UserID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="UserID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="538px" Width="1178px">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="UserID" HeaderText="UserID" InsertVisible="False" ReadOnly="True" SortExpression="UserID" />

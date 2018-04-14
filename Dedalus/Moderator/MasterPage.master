@@ -1,21 +1,95 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Moderator_MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
-<!DOCTYPE html>
-
-<html>
-<head runat="server">
-    <title></title>
+<!doctype html>
+<html lang="en">
+  <head runat="server">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form id="form1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <div>
+    <title>Dedalus Master Mage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    
+      <link href="sticky-footer-navbar.css" rel="stylesheet">
+      <link href="jumbotron.css" rel="stylesheet">
+      
+  </head>
+
+  <body>
+      <form id="form1"  runat="server">
+    <nav ID="Menu1" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" runat="server">
+      <a class="navbar-brand" href="/User/Information.aspx">dedalus</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="home" runat="server" href="/Moderator/Home.aspx">Home </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="information" runat="server" href="/Moderator/Information.aspx">Information </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="feedback" runat="server" href="/Moderator/Feedback.aspx">Leave Feedback </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="about" runat="server" href="/Moderator/AboutUs.aspx">About Us </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="ulist" runat="server" href="/Moderator/UsersList.aspx">Users </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="tlist" runat="server" href="/Moderator/TransactionsList.aspx">Transactions </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="flist" runat="server" href="/Moderator/FeedbackList.aspx">Feedbacks </a>
+          </li>
+        </ul>
+        <%--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server">Search</button>
+        </form>--%>
+          <div class="form-inline my-2 my-lg-0">
+            <a class="nav-link" id="cart" href="/User/Cart.aspx">Cart </a>
+            <a class="nav-link" href="/Profile.aspx">
+                <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
+           </div>
+      </div>
+    </nav>
+     
+    <main role="main" class="container" style="min-height:800px;">
+        <div class="starter-template">
+      
+          
+              <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+
+              </asp:ContentPlaceHolder>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
-    </form>
-</body>
+              
+            </div>
+    </main>
+
+    <footer class="container" runat="server" style="position: absolute; z-index: 0;">
+      <span class="text-muted">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </span>
+    </footer>
+      </form>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  </body>
 </html>
