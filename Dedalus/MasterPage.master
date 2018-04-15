@@ -50,15 +50,17 @@
                <a class="nav-link" runat="server" href="/Register.aspx">Register </a>
            </div>
       </div>
-    </nav>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+
+              </asp:ContentPlaceHolder>
+    
      
     <main role="main" class="container" style="min-height:800px;" >
         <div class="starter-template">     
           
-              <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-
-
-              </asp:ContentPlaceHolder>
+              
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

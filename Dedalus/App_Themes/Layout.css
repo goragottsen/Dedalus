@@ -1,12 +1,16 @@
 ﻿body, html {
     margin: 0;
     padding:0;
+    width: 100%;
 }
 #Content3{
    padding: 0;
 }
-div h1{
+div h1 {
     padding-top: 50px;
     padding-bottom: 30px;
 }
-
+main .starter-template #form1 #ContentPlaceHolder2 {
+    clear: both;
+    width: 100%;
+}
