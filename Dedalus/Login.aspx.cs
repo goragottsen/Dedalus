@@ -34,11 +34,11 @@ public partial class _Default : System.Web.UI.Page
                 lblLoginError.Visible = false;
                 if (AccessLevel.ToString() == "2")
                 {
-                    Response.Redirect("~/Moderator/Home.aspx");
+                    Response.Redirect("~/Moderator/Login_success_moderator.aspx");
                 }
                 else if (AccessLevel.ToString() == "1")
                 {
-                    Response.Redirect("~/User/Home.aspx");
+                    Response.Redirect("~/User/Login_success_user.aspx");
                 }
                 else
                 {
