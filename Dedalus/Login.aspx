@@ -4,52 +4,26 @@
         <link href="App_Themes/login.css" type="text/css" rel="stylesheet" />
 
     
-    <style type="text/css">
-        .auto-style44 {
-            width: 154px;
-            height: 26px;
-        }
-        .auto-style45 {
-            width: 81%;
-            height: 167px;
-            margin-right: 185px;
-        }
-        .auto-style48 {
-            width: 64%;
-        }
-        .auto-style49 {
-            width: 362px;
-            height: 26px;
-        }
-        .auto-style50 {
-            margin-left: 3px;
-        }
-        .auto-style51 {
-            width: 746px;
-        }
-        .auto-style52 {
-            width: 746px;
-            height: 26px;
-        }
-        .auto-style53 {
-            width: 308px;
-        }
-        .auto-style54 {
-            width: 303px;
-        }
-    </style>
-    
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>Thank you for joining us here at Dedalus books!</h1>
+     <style type="text/css">
+    .center-block {
+    width:40%;
+    padding:10px;
+    }
+    #btnLogin{
+        margin-left: 200px;
+    }
+    </style>
+    <%--<h1>Thank you for joining us here at Dedalus books!</h1>
     <p></p>
     <h2>Please provide your login information below.</h2>
     <br />
     <asp:Label ID="lblLoginError" runat="server" Text=""></asp:Label>
     <br />
     <div id="login-content" class="auto-style48">
-    <table class="auto-style45">
-        <tr>
+    <table class="auto-style45">--%>
+        <%--<tr>
             <td class="auto-style49">&nbsp;</td>
             <td class="auto-style44">
                 &nbsp;</td>
@@ -99,9 +73,48 @@
     </table>
         <h3 class="auto-style53">Forgot your Username? Click here.</h3>
         <h3 class="auto-style54">Forgot your Password? Click here.</h3>
+        </div>--%>
+        <br />
+        <br />
+        <br />
+       
+        <br />
+        <div class="container center-block">
+             <h4>Thank you for joining us here at Dedalus books!</h4>
+            <div class="form-group">
+                <div class="col-xs-7 col-sm-7">
+                    <asp:TextBox runat="server" placeholder="username" CssClass="form-control username" ID="txtLoginUsername" Width="270px"></asp:TextBox>
+                </div>
+                <div class="col-xs-7 col-sm-5" style="padding-bottom:10px">
+                    <span class="help-inline pull-left">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                            ControlToValidate="txtLoginUsername"
+                            ErrorMessage="Username is required."
+                            ForeColor="Red" Display="Dynamic">
+                        </asp:RequiredFieldValidator>
+                    </span>
+                </div>
+                    <div class="col-xs-7 col-sm-7">
+                    <asp:TextBox runat="server" TextMode="Password" placeholder="password" CssClass="form-control username" ID="TxtLoginPassword" Width="270px"></asp:TextBox>
+                </div>
+                <div class="col-xs-7 col-sm-5">
+                    <span class="help-inline pull-left">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                            ControlToValidate="TxtLoginPassword"
+                            ErrorMessage="Password is required."
+                            ForeColor="Red" Display="Dynamic">
+                        </asp:RequiredFieldValidator>
+                    </span>
+                </div>
+                <br />
+                <p style="padding-left: 30px">Forgot your Username? Click here.</p>
+                <p style="padding-left: 30px">Forgot your Password? Click here.</p>
+                <asp:Button ID="btnLogin" Text="Login" runat="server" OnClick="ValidateUser" Class="btn btn-primary" />
+                <br />
+                <br />
+                <asp:Label ID="lblLoginError" runat="server" />
+             </div>
         </div>
-    
-
 </asp:Content>
 
 

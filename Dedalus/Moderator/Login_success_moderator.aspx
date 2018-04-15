@@ -3,8 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>Thank you for joining us here at Dedalus books!</h1>
-
-<h2>If you are not redirected to the store page automatically, please click here.</h2>
+    <div class="container">
+        <br />
+        <br />
+        <h2>Thank you for joining us here at Dedalus books!</h2>
+        <h2>If you are not redirected to the store page automatically, please click <a href="Home.aspx">here</a>.</h2>
+    </div>
 </asp:Content>
 
