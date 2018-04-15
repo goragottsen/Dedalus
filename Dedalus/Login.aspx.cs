@@ -40,11 +40,15 @@ public partial class _Default : System.Web.UI.Page
                 {
                     Response.Redirect("~/User/Home.aspx");
                 }
+                else
+                {
+                    lblLoginError.Text = "Invalid user type";
+                }
             }
             else
             {
                 lblLoginError.Visible = true;
-                lblLoginError.Text = "Invalid Credentials Entered, Try again";
+                lblLoginError.Text = "Invalid Credentials Entered. Try again";
             }            
         }
     }
