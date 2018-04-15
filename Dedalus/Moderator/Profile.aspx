@@ -96,7 +96,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
-        <h1 style="padding-top: 15px">My Profile</h1>
+        <h1 style="padding-top: 15px">Hi <asp:Label ID="username" runat="server" Text=""></asp:Label></h1>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style60" rowspan="4">

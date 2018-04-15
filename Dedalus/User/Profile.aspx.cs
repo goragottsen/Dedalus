@@ -10,6 +10,7 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //need code to load profile info and avatar from database
+        displayUserName();
     }
 
     protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
@@ -71,5 +72,9 @@ public partial class _Default : System.Web.UI.Page
     protected void btnChangePassword_Click(object sender, EventArgs e)
     {
         //need code to commit password change to database
+    }
+    private void displayUserName()
+    {
+        username.Text = Session["Username"].ToString();
     }
 }

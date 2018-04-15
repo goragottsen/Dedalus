@@ -14,19 +14,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
         u = UserList.getUserList();
         if (!IsPostBack)
         {
-            this.displayUser();
+            this.displayUserName();
             this.setActiveLink();
         }
     }
-    private void displayUser()
+    private void displayUserName()
     {
-        string usrname = "";
-        for(int i = 0; i < u.uList.Count; i++)
-        {
-            usrname = u.uList[i].name;
-        }
-
-        username.Text = usrname;
+        username.Text = Session["Username"].ToString();
     }
     public void setActiveLink()
     {

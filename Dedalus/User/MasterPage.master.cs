@@ -20,13 +20,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     private void displayUser()
     {
-        string usrname = "";
-        for(int i = 0; i < u.uList.Count; i++)
-        {
-            usrname = u.uList[i].name;
-        }
-
-        username.Text = usrname;
+        username.Text = Session["Username"].ToString();
     }
     public void setActiveLink()
     {
