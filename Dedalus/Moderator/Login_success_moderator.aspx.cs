@@ -10,6 +10,6 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.AppendHeader("Refresh", "3;url=Moderator/Home.aspx");
+        Response.AppendHeader("Refresh", "3;url=Home.aspx");
     }
 }
