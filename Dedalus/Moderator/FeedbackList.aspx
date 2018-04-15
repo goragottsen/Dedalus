@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <h1>List of Reviews from Users</h1>
   <asp:SqlDataSource ID="SQLFeedbackData" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [FeedbackID], [UserID], [Rating], [ISBN], [Device], [Date] FROM [Feedback] ORDER BY [Date] DESC"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SQLFeedbackDetails" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Feedback] WHERE [FeedbackID] = @original_FeedbackID AND (([ISBN] = @original_ISBN) OR ([ISBN] IS NULL AND @original_ISBN IS NULL)) AND (([UserID] = @original_UserID) OR ([UserID] IS NULL AND @original_UserID IS NULL)) AND (([Date] = @original_Date) OR ([Date] IS NULL AND @original_Date IS NULL)) AND (([Rating] = @original_Rating) OR ([Rating] IS NULL AND @original_Rating IS NULL)) AND (([Comment] = @original_Comment) OR ([Comment] IS NULL AND @original_Comment IS NULL)) AND (([Device] = @original_Device) OR ([Device] IS NULL AND @original_Device IS NULL))" InsertCommand="INSERT INTO [Feedback] ([ISBN], [UserID], [Date], [Rating], [Comment], [Device]) VALUES (@ISBN, @UserID, @Date, @Rating, @Comment, @Device)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Feedback] WHERE ([FeedbackID] = @FeedbackID)" UpdateCommand="UPDATE [Feedback] SET [ISBN] = @ISBN, [UserID] = @UserID, [Date] = @Date, [Rating] = @Rating, [Comment] = @Comment, [Device] = @Device WHERE [FeedbackID] = @original_FeedbackID AND (([ISBN] = @original_ISBN) OR ([ISBN] IS NULL AND @original_ISBN IS NULL)) AND (([UserID] = @original_UserID) OR ([UserID] IS NULL AND @original_UserID IS NULL)) AND (([Date] = @original_Date) OR ([Date] IS NULL AND @original_Date IS NULL)) AND (([Rating] = @original_Rating) OR ([Rating] IS NULL AND @original_Rating IS NULL)) AND (([Comment] = @original_Comment) OR ([Comment] IS NULL AND @original_Comment IS NULL)) AND (([Device] = @original_Device) OR ([Device] IS NULL AND @original_Device IS NULL))" ConflictDetection="CompareAllValues">
         <DeleteParameters>
@@ -44,7 +45,7 @@
     <table>
         <tr>
             <td>
-                <asp:DetailsView ID="FeedbackDetails" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" CellPadding="4" DataKeyNames="FeedbackID" DataSourceID="SQLFeedbackDetails" ForeColor="#333333" GridLines="None" OnItemDeleting="FeedbackDetails_ItemDeleting">
+                <asp:DetailsView ID="FeedbackDetails" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" CellPadding="4" DataKeyNames="FeedbackID" DataSourceID="SQLFeedbackDetails" ForeColor="#333333" GridLines="None"> <%--OnItemDeleting="FeedbackDetails_ItemDeleting"--%>
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
                     <EditRowStyle BackColor="#999999" />
