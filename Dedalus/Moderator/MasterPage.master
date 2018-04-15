@@ -60,7 +60,7 @@
         </form>--%>
           <div class="form-inline my-2 my-lg-0">
             <a class="nav-link" id="cart" href="/User/Cart.aspx">Cart </a>
-            <a class="nav-link" href="/Profile.aspx">
+            <a class="nav-link" href="/Moderator/Profile.aspx">
                 <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
            </div>
       </div>

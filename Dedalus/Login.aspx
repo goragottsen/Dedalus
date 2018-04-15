@@ -45,6 +45,8 @@
     <p></p>
     <h2>Please provide your login information below.</h2>
     <br />
+    <asp:Label ID="lblLoginError" runat="server" Text=""></asp:Label>
+    <br />
     <div id="login-content" class="auto-style48">
     <table class="auto-style45">
         <tr>
