@@ -6,7 +6,7 @@
     <div class="container">
         <br />
         <br />
-        <h2>Thank you for joining us here at Dedalus books!</h2>
+        <h1>Thank you for joining us here at Dedalus books!</h1>
         <h2>If you are not redirected to the store page automatically, please click <a href="Home.aspx">here</a>.</h2>
     </div>
 </asp:Content>

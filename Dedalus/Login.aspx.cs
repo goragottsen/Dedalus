@@ -64,6 +64,7 @@ public partial class _Default : System.Web.UI.Page
                 }
                 else
                 {
+                    lblLoginError.Visible = true;
                     lblLoginError.Text = "Invalid user credentials";
                 }
             }

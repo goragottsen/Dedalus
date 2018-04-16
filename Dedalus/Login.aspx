@@ -112,7 +112,7 @@
                 <asp:Button ID="btnLogin" Text="Login" runat="server" OnClick="ValidateUser" Class="btn btn-primary" />
                 <br />
                 <br />
-                <asp:Label ID="lblLoginError" runat="server" />
+                <asp:Label ID="lblLoginError" runat="server" Text=""></asp:Label>
              </div>
         </div>
 </asp:Content>
