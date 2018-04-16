@@ -49,11 +49,17 @@
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" runat="server">Search</button>
         </form>--%>
-          <div class="form-inline my-2 my-lg-0">
+          <div class="form-inline my-2 my-lg-0" runat="server">
             <a class="nav-link" id="cart" href="/User/Cart.aspx">Cart </a>
-            <a class="nav-link" href="/User/Profile.aspx">
+              <div class="dropdown">
+            <a class="nav-link dropdown-toggle" runat="server" href="/User/Profile.aspx" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
-           </div>
+           
+              <div class="dropdown-menu" style="padding:0;" aria-labelledby="dropdownMenuLink">                  
+                      <asp:Button ID="btnLogOut" class="dropdown-item" runat="server" aria-atomic="True" Text="LogOut" style="cursor: pointer; margin:0;padding-bottom:3px;padding-top:5px;" OnClick="btnLogOut_Click" BackColor="#3366FF" />                 
+                </div>
+                  </div>
+          </div>
       </div>
     </nav>
      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">

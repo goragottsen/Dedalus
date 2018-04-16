@@ -8,10 +8,8 @@ using System.Data;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
-    UserList u;
     protected void Page_Load(object sender, EventArgs e)
     {
-        u = UserList.getUserList();
         if (!IsPostBack)
         {
             this.displayUserName();
@@ -20,7 +18,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     private void displayUserName()
     {
-        username.Text = Session["Username"].ToString();
+        if (Session["User"] != null)
+        {
+            username.Text = Session["Username"].ToString();
+        }
     }
     public void setActiveLink()
     {
@@ -48,6 +49,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 tlist.Attributes.Add("class", "nav-link active");
                 break;
         }
+        
+    }
+    protected void btnLogOut_Click(object sender, EventArgs e)
+    {
+        Session["User"] = null;
+        Response.Redirect("~/Visitor/Home.aspx");
     }
 
     //protected void TextBox1_TextChanged(object sender, EventArgs e)

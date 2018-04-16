@@ -60,8 +60,14 @@
         </form>--%>
           <div class="form-inline my-2 my-lg-0">
             <a class="nav-link" id="cart" href="/User/Cart.aspx">Cart </a>
-            <a class="nav-link" href="/Moderator/Profile.aspx">
-                <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" runat="server" href="/User/Profile.aspx" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
+           
+              <div class="dropdown-menu" style="padding:0;" aria-labelledby="dropdownMenuLink" >                  
+                      <asp:Button ID="btnLogOut" class="dropdown-item" runat="server" aria-atomic="True" Text="LogOut" style="cursor: pointer;padding-bottom:3px;padding-top:5px;" OnClick="btnLogOut_Click" />                 
+                </div>
+             </div>              
            </div>
       </div>
     </nav>

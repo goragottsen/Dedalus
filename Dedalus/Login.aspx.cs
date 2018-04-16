@@ -20,6 +20,7 @@ public partial class _Default : System.Web.UI.Page
     protected void ValidateUser(object sender, EventArgs e)
     {
         Session["Username"] = txtLoginUsername.Text;
+        Session["Userpassword"] = TxtLoginPassword.Text;
         // Server.Transfer("Login_success.aspx");
         System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(path);
         string cmdStr = "select AccessLevel from Users where UserName='" + txtLoginUsername.Text + "' AND Password = '" + TxtLoginPassword.Text + "'";
@@ -30,24 +31,47 @@ public partial class _Default : System.Web.UI.Page
         con.Close();
         if (AccessLevel != null)
         {
-            lblLoginError.Visible = false;
-            if (AccessLevel.ToString() == "2")
+            con.Open();
+            string checkPassQuery = "SELECT * FROM Users WHERE username='" + txtLoginUsername.Text + "'";
+            SqlCommand command = new SqlCommand(checkPassQuery, con);
+            SqlDataReader tabledata = command.ExecuteReader();
+            User current = new User();
+            if (tabledata.HasRows)
             {
-                Response.Redirect("~/Moderator/Login_success_moderator.aspx");
+                while (tabledata.Read())
+                {
+                    current.userId = tabledata.GetInt32(0);
+                    current.name = tabledata.GetString(1);
+                    current.username = tabledata.GetString(2);
+                    current.password = tabledata.GetString(3);
+                    current.email = tabledata.GetString(4);
+                    current.address = tabledata.GetString(5);
+                    current.accessLevel = tabledata.GetInt32(6);
+                }
+                tabledata.Close();
             }
-            else if (AccessLevel.ToString() == "1")
+            con.Close();
+            if (current.password.Equals(Session["Userpassword"]))
             {
-                Response.Redirect("~/User/Login_success_user.aspx");
+                Session["User"] = current;
+                if (AccessLevel.ToString() == "2")
+                {
+                    Response.Redirect("~/Moderator/Login_success_moderator.aspx");
+                }
+                else if (AccessLevel.ToString() == "1")
+                {
+                    Response.Redirect("~/User/Login_success_user.aspx");
+                }
+                else
+                {
+                    lblLoginError.Text = "Invalid user credentials";
+                }
             }
             else
             {
-                lblLoginError.Text = "Invalid user credentials";
+                lblLoginError.Visible = true;
+                lblLoginError.Text = "Invalid user credentials. Please try again";
             }
-        }
-        else
-        {
-            lblLoginError.Visible = true;
-            lblLoginError.Text = "Invalid Credentials Entered. Try again";
         }
     }
 }

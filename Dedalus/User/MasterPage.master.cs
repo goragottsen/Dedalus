@@ -5,22 +5,24 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlClient;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
-    UserList u;
+    static string path = Path.getPath();
     protected void Page_Load(object sender, EventArgs e)
-    {
-        u = UserList.getUserList();
+    {        
         if (!IsPostBack)
-        {
+        {           
             this.displayUser();
-            this.setActiveLink();
+            this.setActiveLink();           
         }
     }
     private void displayUser()
     {
-        username.Text = Session["Username"].ToString();
+        if (Session["User"] != null) { 
+            username.Text = Session["Username"].ToString();
+        }
     }
     public void setActiveLink()
     {
@@ -40,7 +42,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 break;
         }
     }
-
+    protected void btnLogOut_Click(object sender, EventArgs e)
+    {       
+        Session["User"] = null;
+        Response.Redirect("~/Visitor/Home.aspx");     
+    }
     //protected void TextBox1_TextChanged(object sender, EventArgs e)
     //{
 
