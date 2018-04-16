@@ -64,8 +64,9 @@
                     <a class="nav-link dropdown-toggle" runat="server" href="/User/Profile.aspx" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <asp:Label ID="username" runat="server" Text=""></asp:Label> </a>               
            
-              <div class="dropdown-menu" style="padding:0;" aria-labelledby="dropdownMenuLink" >                  
-                      <asp:Button ID="btnLogOut" class="dropdown-item" runat="server" aria-atomic="True" Text="LogOut" style="cursor: pointer;padding-bottom:3px;padding-top:5px;" OnClick="btnLogOut_Click" />                 
+              <div class="dropdown-menu" style="padding:0;" aria-labelledby="dropdownMenuLink" >   
+                  <a class="dropdown-item" href="/Moderator/Profile.aspx">Account</a>
+                      <asp:Button ID="btnLogOut" class="dropdown-item" runat="server" aria-atomic="True" Text="LogOut" style="cursor: pointer;padding-bottom:3px;padding-top:5px;" OnClick="btnLogOut_Click" CausesValidation="False" />                 
                 </div>
              </div>              
            </div>
