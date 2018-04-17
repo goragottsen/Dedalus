@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -97,4 +99,28 @@ public partial class _Default : System.Web.UI.Page
     }
     //Database validation:
     //Loop through emails in db to check if the user exists
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        if(IsValid)
+        {
+            SqlDataSource1.Insert();
+            Server.Transfer("Login.aspx");
+        }
+        
+        
+    }
+
+    protected void CustomValidator4_ServerValidate(object source, ServerValidateEventArgs args)
+    {
+        DataView dv =(DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
+        if (dv.Count == 0) //check if SQL query (checking for dupe email) returns rows
+        {
+            args.IsValid = true;
+        }
+        else
+        {
+            args.IsValid = false;
+        }
+    }
 }
