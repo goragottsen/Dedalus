@@ -1,13 +1,20 @@
-﻿#feedback-container {
+table#ContentPlaceHolder1_rbPgRating input {
+    margin: 0 15px;
+}
+
+table#ContentPlaceHolder1_rbPgRating label {
+    text-align: center;
+    display: block;
+}
+
+/*#feedback-container {
     margin: auto;
     padding: 5%;
     width: 70%;
     height: auto;
     width: 500px;
     text-align: center;
-    /*background: #e2ab76;
-      box-shadow: -3px 3px 20px #111111;
-    */
+
     border: 2px solid;
     border-radius: 5px;
 }
@@ -27,30 +34,18 @@
 .feedbackLabel {
     display: inline;
     min-width: 150px;
-    /*background: #b27a42;
-      border: 3px solid;
-      border-radius: 5px;
-    */
     margin: 15px auto;
     padding: 8px;
     font: 15px "Arial Black", Arial;
 }
 
 .feedbackInfo {
-    /*margin: 15px 25px;
-    padding: 10px;
-    background: #fce4c7;*/
     text-align: center;
     width: 150px;
 }
 
 .btnSubmit {
     padding: 10px;
-    /*border-top: 3px solid #f0c090;
-      border-right: 3px solid #f8d2a9;
-      border-left: 3px solid #C29872;
-      border-bottom: 3px solid #D2A872;
-      */
     border-radius: 2px;
     background: lightblue;
     font: 14px "Arial Black", Arial;
@@ -58,12 +53,6 @@
 
 .selections {
     margin: 25px auto;
-    /*
-      border-top: 3px solid #f0c090;
-      border-right: 3px solid #f8d2a9;
-      border-left: 3px solid #C29872;
-      border-bottom: 3px solid #D2A872;
-    */
 }
 
 .rbList label{
@@ -74,7 +63,6 @@
     text-align:left;
 }
 .cbOtherDevice {
-    /*background: #fce4c7;*/
     text-align: center;
     width: 100px;
 }
@@ -92,9 +80,6 @@
         border-radius: 5px;
     }
 
-    .deviceList input[type=checkbox]:checked + label {
-        /*background: rgba(225,225,75,0.9);*/
-    }
 
 .content{
 
@@ -102,4 +87,4 @@
 
 .error{
     background:#fa7979;
-}
+}*/
