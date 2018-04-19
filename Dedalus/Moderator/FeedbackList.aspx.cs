@@ -11,4 +11,23 @@ public partial class Moderator_Default : System.Web.UI.Page
     {
 
     }
+    protected void FeedbackDetails_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+    {
+        lblMsgs.Text = "";
+        if (e.Exception != null)
+        {
+            lblMsgs.Text = "Deletion of entry failed!";
+            e.ExceptionHandled = true;
+        }
+        else
+        {
+            lblMsgs.Text = "Deletion successful!";
+            FeedbackData.DataBind();
+        }
+        if(e.AffectedRows==0)
+        {
+            lblMsgs.Text = "Unable to delete entry.  It may have already been deleted!";
+            FeedbackData.DataBind();
+        }
+    }
 }
