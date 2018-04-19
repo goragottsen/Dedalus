@@ -1,23 +1,23 @@
-﻿<%@ Page Title="Feedback" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="Feedback.aspx.cs" Inherits="Default2" %>
+<%@ Page Title="Feedback" Language="C#" MasterPageFile="~/User/MasterPage.master" AutoEventWireup="true" CodeFile="Feedback.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="App_Themes/Feedback/feedback.css" type="text/css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="../App_Themes/Feedback/feedback.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div id="feedback-container">
+    <div id="feedback-container" class="jumbotron">
         <h1 id ="feedback-title">Tell us what you think!</h1>
-        <label for="txtName" class="feedbackLabel">Your name:</label><br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName">*Required</asp:RequiredFieldValidator>
+    </div>
+    <div class="container">
+        <label for="txtName" class="feedbackLabel">Your name:</label>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName" ForeColor="Red">*Required</asp:RequiredFieldValidator>
         <br />
-        <asp:TextBox ID="txtName" runat="server" CssClass="feedbackInfo" placeholder="Enter your name here!"></asp:TextBox>
+        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter your name here!"></asp:TextBox>
         <br />
-        <br /><br />
-        <label for="txtEmail" class="feedbackLabel">Your e-mail address</label><br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Your email address is required!" ControlToValidate="txtEmail">*Required</asp:RequiredFieldValidator><br />
-        <asp:TextBox ID="txtEmail" runat="server" CssClass="feedbackInfo" placeholder="Enter your email here!"></asp:TextBox>
-        <br />
-        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid Email" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="true"></asp:CustomValidator>
+        <label for="txtEmail" class="feedbackLabel">Your e-mail address</label>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Your email address is required!" ControlToValidate="txtEmail" ForeColor="Red">*Required</asp:RequiredFieldValidator><br />
+        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter your email here!"></asp:TextBox>
+
+        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid Email" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="true" ForeColor="Red"></asp:CustomValidator>
         <br /><br />
         <label for="rbPgRating" class="feedbackLabel">How would you rate our web site?</label><asp:RadioButtonList ID="rbPgRating" CssClass="selections rbList" runat="server" RepeatDirection="Horizontal" align="center">
             <asp:ListItem value="0" Text="Bad" />
@@ -37,15 +37,15 @@
             <asp:ListItem value="tablet" Text="Tablet"/>
             <asp:ListItem value="smartPhone" Text="Smart Phone"/>
             <asp:ListItem value="pc" Text="PC"/>
-            <asp:ListItem value="other" Text="<input id='ContentPlaceHolder1_cbDeviceUsage_Other' type='text' name='ct100$ContentPlaceHolder1_cbDeviceUsage_Other' class='cbOtherDevice' placeholder='Other Device' maxlength='20'>"/>
+            <asp:ListItem value="other" Text="<input id='ContentPlaceHolder1_cbDeviceUsage_Other' type='text' name='ct100$ContentPlaceHolder1_cbDeviceUsage_Other' class='form-control' placeholder='Other Device' maxlength='20'>"/>
         </asp:CheckBoxList>
         <br />
         <label for="comment" class="feedbackLabel">Any Additional Comments?</label>
         <br />
-        <asp:TextBox ID="txtComments" runat="server" CssClass="feedbackInfo comment" Height="125px" MaxLength="300" Width="250px" placeholder="(300 character limit)"></asp:TextBox>
+        <asp:TextBox ID="txtComments" runat="server" CssClass="form-control" Height="125px" MaxLength="300" placeholder="(300 character limit)"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnSubmit" runat="server" Text="Send!" CssClass="btnSubmit" OnClick="btnSubmit_Click" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Send!" CssClass="btn btn-primary btn-block" OnClick="btnSubmit_Click" /><br />
     </div>
 </asp:Content>
 
