@@ -44,7 +44,7 @@
     </asp:SqlDataSource>
     <table>
         <tr>
-            <td>
+            <td style="width:35%;">
                 <asp:DetailsView ID="FeedbackDetails" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" CellPadding="4" DataKeyNames="FeedbackID" DataSourceID="SQLFeedbackDetails" ForeColor="#333333" GridLines="None"> <%--OnItemDeleting="FeedbackDetails_ItemDeleting"--%>
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
