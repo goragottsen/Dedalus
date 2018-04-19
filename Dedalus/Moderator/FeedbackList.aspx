@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="FeedbackList" Language="C#" MasterPageFile="~/Moderator/MasterPage.master" AutoEventWireup="true" CodeFile="FeedbackList.aspx.cs" Inherits="Moderator_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link rel="stylesheet" href="../App_Themes/Feedback/feedback.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="display-4">List of Reviews from Users</h1>
@@ -24,7 +25,7 @@
             <asp:Parameter Name="Device" Type="String" />
         </InsertParameters>
         <SelectParameters>
-            <asp:ControlParameter ControlID="FeedbackData" Name="FeedbackID" PropertyName="SelectedValue" Type="Int32" />
+            <asp:ControlParameter ControlID="FeedbackData" Name="FeedbackID" PropertyName="SelectedValue" Type="Int32" DefaultValue="4"/>
         </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="ISBN" Type="String" />

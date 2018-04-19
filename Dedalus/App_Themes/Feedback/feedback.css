@@ -6,6 +6,9 @@ table#ContentPlaceHolder1_rbPgRating label {
     text-align: center;
     display: block;
 }
+table td{
+    vertical-align: top;
+}
 
 /*#feedback-container {
     margin: auto;
