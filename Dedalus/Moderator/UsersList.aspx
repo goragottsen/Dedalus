@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1 style="padding-top: 50px; padding-bottom: 40px;">List of Dedalus Users</h1>
+    <h1 class="display-4" style="padding-top: 50px; padding-bottom: 40px;">List of Dedalus Users</h1>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [UserID] = @original_UserID AND [Name] = @original_Name AND [Username] = @original_Username AND [Password] = @original_Password AND [Email] = @original_Email AND [Address] = @original_Address AND [AccessLevel] = @original_AccessLevel" InsertCommand="INSERT INTO [Users] ([Name], [Username], [Password], [Email], [Address], [AccessLevel]) VALUES (@Name, @Username, @Password, @Email, @Address, @AccessLevel)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Users]" UpdateCommand="UPDATE [Users] SET [Name] = @Name, [Username] = @Username, [Password] = @Password, [Email] = @Email, [Address] = @Address, [AccessLevel] = @AccessLevel WHERE [UserID] = @original_UserID AND [Name] = @original_Name AND [Username] = @original_Username AND [Password] = @original_Password AND [Email] = @original_Email AND [Address] = @original_Address AND [AccessLevel] = @original_AccessLevel">
         <DeleteParameters>
             <asp:Parameter Name="original_UserID" Type="Int32" />

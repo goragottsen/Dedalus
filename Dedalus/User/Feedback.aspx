@@ -4,12 +4,19 @@
     <link rel="stylesheet" href="../App_Themes/Feedback/feedback.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<<<<<<< Updated upstream
     <div id="feedback-container" class="jumbotron">
         <h1 id ="feedback-title">Tell us what you think!</h1>
     </div>
     <div class="container">
         <label for="txtName" class="feedbackLabel">Your name:</label>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName" ForeColor="Red">*Required</asp:RequiredFieldValidator>
+=======
+    <div id="feedback-container">
+        <h1 class="display-4" id ="feedback-title">Tell us what you think!</h1>
+        <label for="txtName" class="feedbackLabel">Your name:</label><br />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName">*Required</asp:RequiredFieldValidator>
+>>>>>>> Stashed changes
         <br />
         <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter your name here!"></asp:TextBox>
         <br />

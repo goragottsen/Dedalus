@@ -18,10 +18,8 @@
     <!-- Custom styles for this template -->
       <link href="/App_Themes/Layout.css" rel="stylesheet" />
       <link href="sticky-footer-navbar.css" rel="stylesheet">
-      <link href="jumbotron.css" rel="stylesheet">
-      
+      <link href="jumbotron.css" rel="stylesheet">      
   </head>
-
   <body>
       <form id="form1"  runat="server">
     <nav ID="Menu1" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" runat="server">
@@ -74,20 +72,16 @@
     </nav>
      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
 
-
-              </asp:ContentPlaceHolder>
+     </asp:ContentPlaceHolder>
     <main role="main" class="container" style="min-height:800px;">
-        <div class="starter-template">
-      
-          
+       <div class="starter-template">          
               
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
         
         </asp:ContentPlaceHolder>
               
-            </div>
+       </div>
     </main>
-
     <footer class="container" runat="server" style="position: absolute; z-index: 0;">
       <span class="text-muted">Copyright <%= DateTime.Now.Year.ToString() %>&copy; &emsp; Jerome Ching &emsp;Morgan Gill &emsp;Jordan Pike &emsp;Anastasiia Roldugina &emsp;Tamara Saldina  </span>
     </footer>

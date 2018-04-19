@@ -80,7 +80,7 @@
        
         <br />
         <div class="container center-block">
-             <h4>Thank you for joining us here at Dedalus books!</h4>
+             <h4 class="lead">Thank you for joining us here at Dedalus books!</h4>
             <div class="form-group">
                 <div class="col-xs-7 col-sm-7">
                     <asp:TextBox runat="server" placeholder="username" CssClass="form-control username" ID="txtLoginUsername" Width="270px"></asp:TextBox>
@@ -107,8 +107,8 @@
                     </span>
                 </div>
                 <br />
-                <p style="padding-left: 30px">Forgot your Username? Click here.</p>
-                <p style="padding-left: 30px">Forgot your Password? Click here.</p>
+                <p class="lead" style="padding-left: 30px">Forgot your Username? Click here.</p>
+                <p class="lead" style="padding-left: 30px">Forgot your Password? Click here.</p>
                 <asp:Button ID="btnLogin" Text="Login" runat="server" OnClick="ValidateUser" Class="btn btn-primary" />
                 <br />
                 <br />

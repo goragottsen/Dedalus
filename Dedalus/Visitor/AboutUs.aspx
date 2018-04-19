@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1 style="padding-top: 50px">About Us</h1>
+    <h1 class="display-4" style="padding-top: 50px">About Us</h1>
     <h2>Anastasiia Roldugina</h2>
     <p>Computer programming student at George Brown College with a strong set of skills and experience in languages such as Java, 
         Python, C#. Learning new technologies and implementing them into life is what inspires me a lot. Love creating things and applications.</p>

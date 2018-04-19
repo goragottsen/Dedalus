@@ -104,8 +104,8 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>Registration</h1>
-    <p>Already have an account?
+    <h1 class="display-4">Registration</h1>
+    <p class="lead">Already have an account?
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Sign in here.</asp:HyperLink>
     </p>
     <table class="auto-style1">

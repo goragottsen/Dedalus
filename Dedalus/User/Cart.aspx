@@ -5,7 +5,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
-        <h1>Cart Page:</h1>
+        <h1 class="display-4">Cart Page:</h1>
     </div>
     <div>
         <p>Your Cart Currently Holds:</p>
