@@ -9,15 +9,15 @@
     </div>
     <div class="container">
         <label for="txtName" class="feedbackLabel">Your name:</label>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName" ForeColor="Red">*Required</asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredNameValidator" runat="server" ErrorMessage="Your name is required!" ControlToValidate="txtName" ForeColor="Red">*Required</asp:RequiredFieldValidator>
         <br />
         <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Enter your name here!"></asp:TextBox>
         <br />
         <label for="txtEmail" class="feedbackLabel">Your e-mail address</label>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Your email address is required!" ControlToValidate="txtEmail" ForeColor="Red">*Required</asp:RequiredFieldValidator><br />
+        <asp:RequiredFieldValidator ID="RequiredEmailValidator" runat="server" ErrorMessage="Your email address is required!" ControlToValidate="txtEmail" ForeColor="Red">*Required</asp:RequiredFieldValidator><br />
         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter your email here!"></asp:TextBox>
 
-        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid Email" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="true" ForeColor="Red"></asp:CustomValidator>
+        <asp:CustomValidator ID="RegexEmailValidator" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid Email" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="true" ForeColor="Red"></asp:CustomValidator>
         <br /><br />
         <label for="rbPgRating" class="feedbackLabel">How would you rate our web site?</label><asp:RadioButtonList ID="rbPgRating" CssClass="selections rbList" runat="server" RepeatDirection="Horizontal" align="center">
             <asp:ListItem value="0" Text="Bad" />
