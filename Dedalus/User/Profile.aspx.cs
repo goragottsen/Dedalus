@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -11,6 +12,9 @@ public partial class _Default : System.Web.UI.Page
     {
         //need code to load profile info and avatar from database
         displayUserName();
+
+        
+        
     }
 
     protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
@@ -71,10 +75,26 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnChangePassword_Click(object sender, EventArgs e)
     {
-        //need code to commit password change to database
+        if(IsValid)
+        {
+            SqlDataSource1.Update();
+            Session["Userpassword"] = txtNewPassword.Text;
+        }
     }
     private void displayUserName()
     {
         username.Text = Session["Username"].ToString();
+    }
+
+    protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args) //check for correct password before allowing change
+    {
+        if(txtPassword.Text == Session["Userpassword"].ToString())
+        {
+            args.IsValid = true;
+        }
+        else
+        {
+            args.IsValid = false;
+        }
     }
 }
