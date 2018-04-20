@@ -13,8 +13,9 @@ public class Book
     public string publisher;
     public string publicationYear;
     public string price;
-    public string genre;
     public string format;
+    public string genre;
+    public string location;
 
     public Book()
     {

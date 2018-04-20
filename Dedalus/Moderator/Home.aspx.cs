@@ -59,6 +59,25 @@ public partial class _Default : System.Web.UI.Page
         book.price = gvr.Cells[2].Text;
         // book.genre = gvr.Cells[#].ToString();
         // book.format = gvr.Cells[#].ToString();
+        // book.location = gvr.Cells[#].ToString();
+
+        DataView bookView = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty); // Get the result set from the SQL Data Source
+
+        DataTable bookTable = bookView.ToTable(); // Get the result set into a Data Table with all rows present
+
+        string request = "Title = '" + book.title + "'"; // Creation of a SELECT statement
+
+        DataRow[] bookRow = bookTable.Select(request); // Filter rows via the SELECT statement and assign it to a Data Row object
+
+        book.isbn = bookRow[0]["ISBN"].ToString(); // Assign missing values to the Book from the Data Row object
+        // book.title = bookRow[0]["Title"].ToString();
+        // book.author = bookRow[0]["Author"].ToString();
+        book.publisher = bookRow[0]["Publisher"].ToString();
+        book.publicationYear = bookRow[0]["PublicationYear"].ToString();
+        // book.price = bookRow[0]["Price"].ToString();
+        book.format = bookRow[0]["Format"].ToString();
+        book.genre = bookRow[0]["Genre"].ToString();
+        book.location = bookRow[0]["Location"].ToString();
 
         BookList blist = BookList.getBookList();
         if (blist != null)

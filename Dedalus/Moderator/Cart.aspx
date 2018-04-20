@@ -16,7 +16,7 @@
         <!-- I feel as though we'll only really be able to code the shopping cart functionality once the database had been implemented -->
     </div>
     <div>
-        <p>Ready to proceed to checkout? <asp:Button ID="btnCartToCheckout" runat="server" Text="Proceed to Checkout" />
+        <p>Ready to proceed to checkout? <asp:Button ID="btnCartToCheckout" runat="server" Text="Proceed to Checkout" OnClick="btnCartToCheckout_Click" />
         </p>
         <p>Want to return to the store page? 
             <asp:Button ID="btnBackToStore" runat="server" OnClick="btnBackToStore_Click" Text="Return to Store Page" />

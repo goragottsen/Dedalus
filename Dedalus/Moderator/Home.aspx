@@ -68,18 +68,28 @@
 <br />
 <br />
 <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Books] WHERE [ISBN] = @original_ISBN AND [Title] = @original_Title AND [Author] = @original_Author AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL))" InsertCommand="INSERT INTO [Books] ([ISBN], [Title], [Author], [Price]) VALUES (@ISBN, @Title, @Author, @Price)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [ISBN], [Title], [Author], [Price] FROM [Books]" UpdateCommand="UPDATE [Books] SET [Title] = @Title, [Author] = @Author, [Price] = @Price WHERE [ISBN] = @original_ISBN AND [Title] = @original_Title AND [Author] = @original_Author AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL))">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Books] WHERE [ISBN] = @original_ISBN AND [Title] = @original_Title AND [Author] = @original_Author AND [Publisher] = @original_Publisher AND [PublicationYear] = @original_PublicationYear AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL)) AND (([Format] = @original_Format) OR ([Format] IS NULL AND @original_Format IS NULL)) AND (([Genre] = @original_Genre) OR ([Genre] IS NULL AND @original_Genre IS NULL)) AND (([Location] = @original_Location) OR ([Location] IS NULL AND @original_Location IS NULL))" InsertCommand="INSERT INTO [Books] ([ISBN], [Title], [Author], [Publisher], [PublicationYear], [Price], [Format], [Genre], [Location]) VALUES (@ISBN, @Title, @Author, @Publisher, @PublicationYear, @Price, @Format, @Genre, @Location)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Books]" UpdateCommand="UPDATE [Books] SET [Title] = @Title, [Author] = @Author, [Publisher] = @Publisher, [PublicationYear] = @PublicationYear, [Price] = @Price, [Format] = @Format, [Genre] = @Genre, [Location] = @Location WHERE [ISBN] = @original_ISBN AND [Title] = @original_Title AND [Author] = @original_Author AND [Publisher] = @original_Publisher AND [PublicationYear] = @original_PublicationYear AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL)) AND (([Format] = @original_Format) OR ([Format] IS NULL AND @original_Format IS NULL)) AND (([Genre] = @original_Genre) OR ([Genre] IS NULL AND @original_Genre IS NULL)) AND (([Location] = @original_Location) OR ([Location] IS NULL AND @original_Location IS NULL))">
         <DeleteParameters>
             <asp:Parameter Name="original_ISBN" Type="String" />
             <asp:Parameter Name="original_Title" Type="String" />
             <asp:Parameter Name="original_Author" Type="String" />
             <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_PublicationYear" Type="Int32" />
+            <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_Format" Type="String" />
+            <asp:Parameter Name="original_Genre" Type="String" />
+            <asp:Parameter Name="original_Location" Type="String" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="ISBN" Type="String" />
             <asp:Parameter Name="Title" Type="String" />
             <asp:Parameter Name="Author" Type="String" />
             <asp:Parameter Name="Price" Type="Decimal" />
+            <asp:Parameter Name="PublicationYear" Type="Int32" />
+            <asp:Parameter Name="Price" Type="Decimal" />
+            <asp:Parameter Name="Format" Type="String" />
+            <asp:Parameter Name="Genre" Type="String" />
+            <asp:Parameter Name="Location" Type="String" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="Title" Type="String" />
@@ -89,6 +99,16 @@
             <asp:Parameter Name="original_Title" Type="String" />
             <asp:Parameter Name="original_Author" Type="String" />
             <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="Location" Type="String" />
+            <asp:Parameter Name="original_ISBN" Type="String" />
+            <asp:Parameter Name="original_Title" Type="String" />
+            <asp:Parameter Name="original_Author" Type="String" />
+            <asp:Parameter Name="original_Publisher" Type="String" />
+            <asp:Parameter Name="original_PublicationYear" Type="Int32" />
+            <asp:Parameter Name="original_Price" Type="Decimal" />
+            <asp:Parameter Name="original_Format" Type="String" />
+            <asp:Parameter Name="original_Genre" Type="String" />
+            <asp:Parameter Name="original_Location" Type="String" />
         </UpdateParameters>
 </asp:SqlDataSource>
 <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Books] WHERE ([ISBN] = @ISBN)" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Books] WHERE [ISBN] = @original_ISBN AND [Title] = @original_Title AND [Author] = @original_Author AND [Publisher] = @original_Publisher AND [PublicationYear] = @original_PublicationYear AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL)) AND (([Format] = @original_Format) OR ([Format] IS NULL AND @original_Format IS NULL)) AND (([Genre] = @original_Genre) OR ([Genre] IS NULL AND @original_Genre IS NULL)) AND (([Location] = @original_Location) OR ([Location] IS NULL AND @original_Location IS NULL))" InsertCommand="INSERT INTO [Books] ([ISBN], [Title], [Author], [Publisher], [PublicationYear], [Price], [Format], [Genre], [Location]) VALUES (@ISBN, @Title, @Author, @Publisher, @PublicationYear, @Price, @Format, @Genre, @Location)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Books] SET [Title] = @Title, [Author] = @Author, [Publisher] = @Publisher, [PublicationYear] = @PublicationYear, [Price] = @Price, [Format] = @Format, [Genre] = @Genre, [Location] = @Location WHERE [ISBN] = @original_ISBN AND [Title] = @original_Title AND [Author] = @original_Author AND [Publisher] = @original_Publisher AND [PublicationYear] = @original_PublicationYear AND (([Price] = @original_Price) OR ([Price] IS NULL AND @original_Price IS NULL)) AND (([Format] = @original_Format) OR ([Format] IS NULL AND @original_Format IS NULL)) AND (([Genre] = @original_Genre) OR ([Genre] IS NULL AND @original_Genre IS NULL)) AND (([Location] = @original_Location) OR ([Location] IS NULL AND @original_Location IS NULL))">
