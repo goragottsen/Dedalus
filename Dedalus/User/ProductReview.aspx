@@ -4,7 +4,7 @@
     <link href="App_Themes/Feedback/feedback.css" type="text/css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div id="feedback-container">
+    <div id="feedback-container" class="lead">
         <h1 class="display-4" id="feedback-title">Product Review</h1>
         <table id="review-container">
             <tr>

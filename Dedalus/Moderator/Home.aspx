@@ -5,7 +5,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="display-3" style="text-align: left; font-weight: normal">Welcome to the Dedalus Web Site!</h1>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="686px" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleted="GridView1_RowDeleted">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="686px" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" ReadOnly="True" Visible="False" />
@@ -144,7 +144,7 @@
 
 
 <asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
-   <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron" style="background-image: url('http://localhost:50207/App_Images/jumbo.jpg'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
           <div class="container">
               <h1>&nbsp;</h1>

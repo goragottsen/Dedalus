@@ -6,10 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration.Provider;
+using System.Web.Security;
 
 public partial class _Default : System.Web.UI.Page
 {
-
     static string path = Path.getPath();
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -56,10 +56,15 @@ public partial class _Default : System.Web.UI.Page
                 Session["User"] = current;
                 if (AccessLevel.ToString() == "2")
                 {
+                    if (!Roles.RoleExists("Administrators"))
+                        Roles.CreateRole("Administrators");
                     Response.Redirect("~/Moderator/Login_success_moderator.aspx");
                 }
                 else if (AccessLevel.ToString() == "1")
                 {
+                    if (!Roles.RoleExists("Users"))
+                        Roles.CreateRole("Users");
+
                     Response.Redirect("~/User/Login_success_user.aspx");
                 }
                 else

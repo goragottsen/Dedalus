@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <div>
+        <div class="lead">
             <h1 class="display-4">Information Page</h1>
 
             <p style="padding: 15px 0px 0px 0px">Welcome to Dedalus Books!</p>

@@ -16,10 +16,28 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         bookList = BookList.getBookList();
-
-        if (!IsPostBack)
+        User u = (User)Session["user"];
+        if (u != null)
         {
-            this.displayBooks();
+            string username = Session["username"].ToString();
+            if (u.accessLevel == 2)
+            {
+                Page.Visible = true;
+                if (!IsPostBack)
+                {
+                    this.displayBooks();
+                }
+            }
+            else
+            {
+                Page.Visible = false;
+                Response.Redirect("~/Login.aspx");
+            }
+        }
+        else
+        {
+            Page.Visible = false;
+            Response.Redirect("~/Login.aspx");
         }
 
     }

@@ -9,8 +9,31 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        User u = (User)Session["user"];
+        if (u != null)
+        {
+            string username = Session["username"].ToString();
+            if (u.accessLevel == 2)
+            {
+                Page.Visible = true;
+                if (!Page.IsPostBack)
+                {
+                    displayUserName();
+                }
+            }
+            else
+            {
+                Page.Visible = false;
+                Response.Redirect("~/Login.aspx");
+            }
+        }
+        else
+        {
+            Page.Visible = false;
+            Response.Redirect("~/Login.aspx");
+        }
         //need code to load profile info and avatar from database
-        displayUserName();
+        
     }
 
     protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
