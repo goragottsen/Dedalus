@@ -22,9 +22,36 @@ public partial class _Default : System.Web.UI.Page
         Session["Username"] = txtLoginUsername.Text;
         Session["Userpassword"] = TxtLoginPassword.Text;
         // Server.Transfer("Login_success.aspx");
+
+        //   Lines added for Salting
+        System.Data.SqlClient.SqlConnection saltCon = new System.Data.SqlClient.SqlConnection(path);
+        
+        string saltCmdStr = "SELECT SaltGrain, HashValue, Password from Users WHERE UserName='" + txtLoginUsername.Text + "'";
+        SqlCommand saltCmd = new SqlCommand(saltCmdStr, saltCon);
+        saltCon.Open();
+        SqlDataReader saltTableData = saltCmd.ExecuteReader();
+        SaltCheck sc1 = new SaltCheck();
+        if (saltTableData.HasRows)
+        {
+            while (saltTableData.Read())
+            {
+                sc1.saltGrain = saltTableData.GetInt32(0);
+                sc1.hashValue = saltTableData.GetInt64(1);
+                sc1.password = saltTableData.GetString(2);
+                sc1.saltedPassword = sc1.password + sc1.saltGrain.ToString();
+            }
+            if (Math.Abs(sc1.saltedPassword.GetHashCode()) != sc1.hashValue)
+            {
+                lblLoginError.Visible = true;
+                lblLoginError.Text = "Invalid salt credentials. Please try again";
+                return;
+            }
+        }
+        saltCon.Close();
+        // ^ Lines added for Salting ^
+        
         System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(path);
         string cmdStr = "select AccessLevel from Users where UserName='" + txtLoginUsername.Text + "' AND Password = '" + TxtLoginPassword.Text + "'";
-
         SqlCommand cmd = new SqlCommand(cmdStr, con);
         con.Open();
         Object AccessLevel = cmd.ExecuteScalar();
@@ -47,6 +74,11 @@ public partial class _Default : System.Web.UI.Page
                     current.email = tabledata.GetString(4);
                     current.address = tabledata.GetString(5);
                     current.accessLevel = tabledata.GetInt32(6);
+
+                    //   Lines added for Salting
+                    current.saltGrain = tabledata.GetInt32(7);
+                    current.hashValue = tabledata.GetInt64(8);
+                    // ^ Lines added for Salting ^
                 }
                 tabledata.Close();
             }
@@ -56,15 +88,14 @@ public partial class _Default : System.Web.UI.Page
                 Session["User"] = current;
                 if (AccessLevel.ToString() == "2")
                 {
-                    if (!Roles.RoleExists("Administrators"))
-                        Roles.CreateRole("Administrators");
+                    //if (!Roles.RoleExists("Administrators"))
+                        //Roles.CreateRole("Administrators");
                     Response.Redirect("~/Moderator/Login_success_moderator.aspx");
                 }
                 else if (AccessLevel.ToString() == "1")
                 {
-                    if (!Roles.RoleExists("Users"))
-                        Roles.CreateRole("Users");
-
+                    //if (!Roles.RoleExists("Users"))
+                        //Roles.CreateRole("Users");
                     Response.Redirect("~/User/Login_success_user.aspx");
                 }
                 else

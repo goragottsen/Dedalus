@@ -104,7 +104,27 @@ public partial class _Default : System.Web.UI.Page
     {
         if(IsValid)
         {
+            //   Lines added for Salting
+            Random rnd = new Random();
+            int saltInt = rnd.Next(100, 900);
+            Int64 hashValue;
+            string path = Path.getPath();
+            // string userPassWord = txtPassword.Text;
+            string saltString = txtPassword.Text + saltInt.ToString();
+            hashValue = Math.Abs(saltString.GetHashCode());
+            System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(path);
+            string cmdStr = "UPDATE Users SET SaltGrain = '" + saltInt + "', HashValue = '" + hashValue + "' WHERE Username = '" + txtUsername.Text + "'";
+            SqlCommand cmd = new SqlCommand(cmdStr, con);
+            // ^ Lines added for Salting ^
+
             SqlDataSource1.Insert();
+
+            //   Lines added for Salting
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            // ^ Lines added for Salting ^
+
             Server.Transfer("Login.aspx");
         }
         

@@ -19,6 +19,11 @@ public class User
     public int accessLevel;
     public int isInRole;
 
+    //   Lines added for Salting
+    public int saltGrain;
+    public Int64 hashValue;
+    // ^ Lines added for Salting ^
+
     public static bool isUser;
     public static bool isModerator;
 
