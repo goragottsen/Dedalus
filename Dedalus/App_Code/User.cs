@@ -28,7 +28,6 @@ public class User
     public static bool isUser;
     public static bool isModerator;
 
-     // Stashed changes
     public User()
     {
    

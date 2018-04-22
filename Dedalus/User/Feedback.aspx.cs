@@ -58,29 +58,26 @@ public partial class Default2 : System.Web.UI.Page
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         User u = (User)Session["user"];
-        
-
-        
-
-        SqlConnection conn = new SqlConnection();
-        conn.ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB;" + "AttachDbFilename = |DataDirectory|\\Dedalus.mdf;" + "Integrated Security = True;";
-        // conn.Open();
-
-        SqlCommand command = conn.CreateCommand();
-        Feedback feedback = new Feedback();
-        feedback.comment = txtComments.Text;
-        feedback.date = DateTime.Now.ToString();
-        feedback.rating = rbPgRating.SelectedIndex;
-        feedback.device = cbDeviceUsage.SelectedValue.ToString();
-        feedback.userId = u.userId;
-        
-
-        command.CommandText = "INSERT INTO Feedback (ISBN, UserId, Date, Rating, Comment, Device) VALUES ('" + 0 + "', '" + feedback.userId + "', '" + feedback.date + "', '" + feedback.rating + "', '" + feedback.comment + "', '" + feedback.device + "');";
-        command.Connection = conn;
-        command.Connection.Open();
-        command.ExecuteNonQuery();
         if (IsValid)
         {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB;" + "AttachDbFilename = |DataDirectory|\\Dedalus.mdf;" + "Integrated Security = True;";
+            // conn.Open();
+
+            SqlCommand command = conn.CreateCommand();
+            Feedback feedback = new Feedback();
+            feedback.comment = txtComments.Text;
+            feedback.date = DateTime.Now.ToString();
+            feedback.rating = rbPgRating.SelectedIndex;
+            feedback.device = cbDeviceUsage.SelectedValue.ToString();
+            feedback.userId = u.userId;
+        
+
+            command.CommandText = "INSERT INTO Feedback (ISBN, UserId, Date, Rating, Comment, Device) VALUES ('" + 0 + "', '" + feedback.userId + "', '" + feedback.date + "', '" + feedback.rating + "', '" + feedback.comment + "', '" + feedback.device + "');";
+            command.Connection = conn;
+            command.Connection.Open();
+            command.ExecuteNonQuery();
+        
             Response.Redirect("FeedbackSuccess.aspx");
         }
     }

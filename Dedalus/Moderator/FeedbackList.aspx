@@ -76,7 +76,7 @@
                         <asp:BoundField DataField="FeedbackID" HeaderText="FeedbackID" SortExpression="FeedbackID" InsertVisible="False" ReadOnly="True" Visible="False" />
                         <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="UserID" />
                         <asp:BoundField DataField="Rating" HeaderText="Rating" SortExpression="Rating" />
-                        <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" />
+                        <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" Visible="False" />
                         <asp:BoundField DataField="Device" HeaderText="Device" SortExpression="Device" />
                         <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                     </Columns>

@@ -10,19 +10,19 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="display-3" style="text-align: left; font-weight: normal">Welcome to the Dedalus Web Site!</h1>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="965px" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" CssClass="auto-style1">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="756px" HorizontalAlign="Left" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated" CssClass="auto-style1">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="ISBN" HeaderText="ISBN" SortExpression="ISBN" ReadOnly="True" Visible="False" />
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
             <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
-            <asp:BoundField DataField="Publisher" HeaderText="Publisher" SortExpression="Publisher" Visible="False" />
-            <asp:BoundField DataField="PublicationYear" HeaderText="PublicationYear" SortExpression="PublicationYear" Visible="False" />
+            <asp:BoundField DataField="Publisher" HeaderText="Publisher" SortExpression="Publisher" Visible="False"/>
+            <asp:BoundField DataField="PublicationYear" HeaderText="PublicationYear" SortExpression="PublicationYear" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:BoundField DataField="Format" HeaderText="Format" SortExpression="Format" Visible="False" />
-            <asp:BoundField DataField="Genre" HeaderText="Genre" SortExpression="Genre" />
+            <asp:BoundField DataField="Format" HeaderText="Format" SortExpression="Format" Visible="False"/>
+            <asp:BoundField DataField="Genre" HeaderText="Genre" SortExpression="Genre" Visible="False"/>
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" Visible="False" />
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
             <asp:TemplateField ShowHeader="False">
                 <ItemTemplate>
                     <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandName="AddToCart" Text="Add to Cart" OnClick="AddToCartClick"/>
