@@ -108,6 +108,7 @@
         <asp:ControlParameter ControlID="GridView1" Name="ISBN" PropertyName="SelectedValue" Type="String" />
     </SelectParameters>
 </asp:SqlDataSource>
+    <asp:Label ID="lblError" runat="server"></asp:Label>
     <br />
     </asp:Content>
 

@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="feedback-container" class="jumbotron">
-        <h1 id ="feedback-title">Tell us what you think!</h1>
+        <h1 class="display-4" id ="feedback-title">Tell us what you think!</h1>
     </div>
     <div class="container">
         <label for="txtName" class="feedbackLabel">Your name:</label>

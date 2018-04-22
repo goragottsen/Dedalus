@@ -29,5 +29,9 @@ public class BookList
 
         return (BookList)HttpContext.Current.Session["Books"];
     }
+    public void Clear()
+    {        
+        bList.Clear();
+    }
 
 }

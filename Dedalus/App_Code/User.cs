@@ -19,6 +19,7 @@ public class User
     public int accessLevel;
     public int isInRole;
 
+<<<<<<< Updated upstream
     //   Lines added for Salting
     public int saltGrain;
     public Int64 hashValue;
@@ -27,6 +28,8 @@ public class User
     public static bool isUser;
     public static bool isModerator;
 
+=======
+>>>>>>> Stashed changes
     public User()
     {
    

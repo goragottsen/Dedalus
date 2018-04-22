@@ -10,6 +10,26 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        User u = (User)Session["user"];
+        if (u != null)
+        {
+            string username = Session["username"].ToString();
+            if (u.accessLevel == 1)
+            {
+                Page.Visible = true;
+            }
+            else
+            {
+                Page.Visible = false;
+                Response.Redirect("~/Login.aspx");
+            }
+        }
+        else
+        {
+            Page.Visible = false;
+            Response.Redirect("~/Login.aspx");
+        }
+
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
     }
 
@@ -34,6 +54,14 @@ public partial class Default2 : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+        User u = (User)Session["user"];
+        Feedback feedback = new Feedback();
+        feedback.comment = txtComments.Text;
+        feedback.rating = Convert.ToInt32(rbPgRating.SelectedItem);
+        feedback.device = cbDeviceUsage.SelectedValue.ToString();
+        feedback.userId = u.userId;
+
+
         if (IsValid)
         {
             Response.Redirect("FeedbackSuccess.aspx");

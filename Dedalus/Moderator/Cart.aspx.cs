@@ -57,15 +57,20 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnBackToStore_Click(object sender, EventArgs e)
     {
-        Server.Transfer("Home.aspx");
+        Server.Transfer("~/Moderator/Home.aspx");
     }
 
     protected void btnClearCart_Click(object sender, EventArgs e)
     {
         // Initial way of clearing the cart.
+
+        clearCart();
+    }
+
+    public void clearCart()
+    {
         tbCart.Text = "";
         bookList.bList.Clear();
-
     }
 
     protected void btnCartToCheckout_Click(object sender, EventArgs e)

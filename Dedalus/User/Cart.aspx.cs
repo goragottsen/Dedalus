@@ -44,15 +44,20 @@ public partial class _Default : System.Web.UI.Page
 
     private void displayBooks()
     {
-        string content = "";
+        if (BookList.getBookList() != null) { 
+            string content = "";
 
-        for (int i = 0; i < bookList.bList.Count; i++)
-        {
-            content = content + bookList.bList[i].title + ". By: " + bookList.bList[i].author + ". Price: $" + bookList.bList[i].price + "\n";
+            for (int i = 0; i < bookList.bList.Count; i++)
+            {
+                content = content + bookList.bList[i].title + ". By: " + bookList.bList[i].author + ". Price: $" + bookList.bList[i].price + "\n";
+            }
+
+            tbCart.Text = content;
         }
-
-        tbCart.Text = content;
-
+        else
+        {
+            tbCart.Text = "";
+        }
     }
 
     protected void btnBackToStore_Click(object sender, EventArgs e)
@@ -63,11 +68,14 @@ public partial class _Default : System.Web.UI.Page
     protected void btnClearCart_Click(object sender, EventArgs e)
     {
         // Initial way of clearing the cart.
-        tbCart.Text = "";
-        bookList.bList.Clear();
+        clearCart();
 
     }
-
+    public void clearCart()
+    {
+        tbCart.Text = "";
+        bookList.bList.Clear();
+    }
     protected void btnCartToCheckout_Click(object sender, EventArgs e)
     {
         Server.Transfer("CheckOut.aspx");

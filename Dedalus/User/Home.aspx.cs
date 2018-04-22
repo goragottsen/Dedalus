@@ -99,7 +99,7 @@ public partial class _Default : System.Web.UI.Page
         if (blist != null)
         {
             blist.add(book);
-            Response.Redirect("Cart.aspx");
+            Response.Redirect("~/User/Cart.aspx");
         }
     }
 

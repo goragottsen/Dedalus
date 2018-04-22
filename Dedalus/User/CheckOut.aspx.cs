@@ -86,7 +86,7 @@ public partial class User_Default : System.Web.UI.Page
         bookTable.Rows.Add(bookRow);
         */
 
-        if (currentUser == null|| currentUser.userId == null || currentUser.userId == 0)
+        if (currentUser == null|| currentUser.userId == 0 || currentUser.userId == 0)
         {
             bookRowView["UserID"] = 1;
             //bookRow["UserID"] = 1;
@@ -105,7 +105,7 @@ public partial class User_Default : System.Web.UI.Page
         totalFloat = totalFloat * 1.13F;
 
         // command.CommandType = System.Data.CommandType.Text;
-        command.CommandText = "INSERT INTO Invoices (UserID, InvoiceTotal, PaymentTotal) VALUES ('" + bookRowView["UserID"] + "', '" + totalFloat + "', '" + totalFloat + "');";
+        command.CommandText = "INSERT INTO Invoices (UserID, Date, InvoiceTotal, PaymentTotal, PaymentDate) VALUES ('" + bookRowView["UserID"] + "', '" + bookRowView["Date"] + "', '" + totalFloat + "', '" + totalFloat + "', '" + bookRowView["PaymentDate"] + "');";
         // command.CommandText = "INSERT INTO Invoices (UserID, Date, InvoiceTotal, PaymentTotal, PaymentDate) VALUES ('" + bookRowView["UserID"] + "', '" + "20/04/2018 10:10:10 AM" + "', '" + totalFloat + "', '" + totalFloat + "', '" + "20/04/2018 10:10:10 AM" + "');";
         // command.CommandText = "INSERT INTO Invoices (UserID, Date, InvoiceTotal, PaymentTotal, PaymentDate) VALUES ('" + bookRowView["UserID"] + "', 'CONVERT(datetime, " + bookRowView["Date"] + ", 131)', '" + totalFloat + "', '" + totalFloat + "', 'CONVERT(datetime, " + bookRowView["PaymentDate"] + ", 131)');";
         // command.CommandText = "INSERT INTO Invoices (UserID, Date, InvoiceTotal, PaymentTotal, PaymentDate) VALUES ('" + bookRowView["UserID"] + "', '" + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt") + "', '" + totalFloat + "', '" + totalFloat + "', '" + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt") + "');";
@@ -116,7 +116,8 @@ public partial class User_Default : System.Web.UI.Page
         // conn.Close();
         bookRowView.EndEdit();
         // Server.Transfer("~/Moderator/TransactionsList.aspx");
-        Response.Redirect("~/Moderator/TransactionsList.aspx");
+        bookList.Clear();
+        Response.Redirect("~/User/PurchaseSuccessUser.aspx");
 
         /*
         DataTable bookTable = bookView.ToTable(); // Get the result set into a Data Table with all rows present
