@@ -18,7 +18,8 @@
         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Enter your email here!"></asp:TextBox>
         <asp:CustomValidator ID="RegexEmailValidator" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid Email" OnServerValidate="CustomValidator1_ServerValidate" ValidateEmptyText="true" ForeColor="Red"></asp:CustomValidator>
         <br /><br />
-        <label for="rbPgRating" class="feedbackLabel">How would you rate our web site?</label><asp:RadioButtonList ID="rbPgRating" CssClass="selections rbList" runat="server" RepeatDirection="Horizontal" align="center">
+        <label for="rbPgRating" class="feedbackLabel">How would you rate our web site?</label>
+        <asp:RadioButtonList ID="rbPgRating" CssClass="selections rbList" runat="server" RepeatDirection="Horizontal" align="center">
             <asp:ListItem value="0" Text="Bad" />
             <asp:ListItem value="1" />
             <asp:ListItem value="2" />

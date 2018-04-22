@@ -88,20 +88,10 @@ public partial class _Default : System.Web.UI.Page
                 Session["User"] = current;
                 if (AccessLevel.ToString() == "2")
                 {
-<<<<<<< Updated upstream
-                    //if (!Roles.RoleExists("Administrators"))
-                        //Roles.CreateRole("Administrators");
-=======
->>>>>>> Stashed changes
                     Response.Redirect("~/Moderator/Login_success_moderator.aspx");
                 }
                 else if (AccessLevel.ToString() == "1")
                 {
-<<<<<<< Updated upstream
-                    //if (!Roles.RoleExists("Users"))
-                        //Roles.CreateRole("Users");
-=======
->>>>>>> Stashed changes
                     Response.Redirect("~/User/Login_success_user.aspx");
                 }
                 else
